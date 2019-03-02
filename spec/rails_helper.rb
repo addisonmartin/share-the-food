@@ -10,9 +10,6 @@ require 'capybara/poltergeist'
 require 'factory_girl_rails'
 require 'capybara/rspec'
 
-config.include Devise::Test::IntegrationHelpers, type: :features
-config.include FatoryGirl::Syntax::Methods
-
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -39,52 +36,52 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+   config.include Devise::Test::IntegrationHelpers, type: :features
+   config.include FactoryGirl::Syntax::Methods
 
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = false
+   # If you're not using ActiveRecord, or you'd prefer not to run each of your
+   # examples within a transaction, remove the following line or assign false
+   # instead of true.
+   config.use_transactional_fixtures = false
 
-  # Clear the database between tests with DatabaseCleaner!
-  config.before(:suite) do
+   # Clear the database between tests with DatabaseCleaner!
+   config.before(:suite) do
      DatabaseCleaner.clean_with(:transaction)
-  end
+   end
 
-  config.before(:each) do
+   config.before(:each) do
      DatabaseCleaner.strategy = :transaction
-  end
+   end
 
-  config.before(:each, :js => true) do
+   config.before(:each, :js => true) do
      DatabaseCleaner.strategy = :truncation
-  end
+   end
 
-  config.before(:each) do
+   config.before(:each) do
      DatabaseCleaner.start
-  end
+   end
 
-  config.after(:each) do
+   config.after(:each) do
      DatabaseCleaner.clean
-  end
+   end
 
-  # RSpec Rails can automatically mix in different behaviours to your tests
-  # based on their file location, for example enabling you to call `get` and
-  # `post` in specs under `spec/controllers`.
-  #
-  # You can disable this behaviour by removing the line below, and instead
-  # explicitly tag your specs with their type, e.g.:
-  #
-  #     RSpec.describe UsersController, :type => :controller do
-  #       # ...
-  #     end
-  #
-  # The different available types are documented in the features, such as in
-  # https://relishapp.com/rspec/rspec-rails/docs
-  config.infer_spec_type_from_file_location!
+   # RSpec Rails can automatically mix in different behaviours to your tests
+   # based on their file location, for example enabling you to call `get` and
+   # `post` in specs under `spec/controllers`.
+   #
+   # You can disable this behaviour by removing the line below, and instead
+   # explicitly tag your specs with their type, e.g.:
+   #
+   #     RSpec.describe UsersController, :type => :controller do
+   #       # ...
+   #     end
+   #
+   # The different available types are documented in the features, such as in
+   # https://relishapp.com/rspec/rspec-rails/docs
+   config.infer_spec_type_from_file_location!
 
-  # Filter lines from Rails gems in backtraces.
-  config.filter_rails_from_backtrace!
-  # arbitrary gems may also be filtered via:
-  # config.filter_gems_from_backtrace("gem name")
+   # Filter lines from Rails gems in backtraces.
+   config.filter_rails_from_backtrace!
+   # arbitrary gems may also be filtered via:
+   # config.filter_gems_from_backtrace("gem name")
 end

@@ -42,6 +42,9 @@ gem 'therubyracer'
 # Use bootstrap for UI elements
 gem 'bootstrap-sass', '~> 3.4.1'
 
+# Use the bootstrap login form
+gem 'bootstrap_form'
+
 # Boostrap is dependent on jquery
 gem 'jquery-rails'
 

@@ -52,11 +52,8 @@ gem 'jquery-rails'
 gem 'devise'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
-  # Used to lint .scss stylesheet files during development from Atom text editor.
-  gem 'scss_lint', require: false
+   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -66,14 +63,22 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Used to lint .scss stylesheet files during development from Atom text editor.
+  gem 'scss_lint', require: false
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+   gem 'rspec-rails', '~> 3.8.2'
+   gem 'factory_girl_rails', '~> 4.9.0'
+   gem 'rails-controller-testing', '~> 1.0.4'
+   gem 'headless', '~> 2.3.1'
+   # Adds support for Capybara system testing and selenium driver
+   gem 'capybara', '>= 2.15'
+   gem 'poltergeist', '~> 1.18.1'
+   gem 'database_cleaner', '~> 1.7.0'
+   gem 'selenium-webdriver', '~> 3.141.0'
+   # Easy installation and use of chromedriver to run system tests with Chrome
+   gem 'chromedriver-helper', '~> 2.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

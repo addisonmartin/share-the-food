@@ -65,6 +65,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Used to lint .scss stylesheet files during development from Atom text editor.
   gem 'scss_lint', require: false
+
 end
 
 group :test do

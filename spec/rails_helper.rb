@@ -9,6 +9,7 @@ require 'rspec/rails'
 require 'capybara/poltergeist'
 require 'factory_girl_rails'
 require 'capybara/rspec'
+require 'devise'
 
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
@@ -30,7 +31,6 @@ Capybara.server = :puma
 
 RSpec.configure do |config|
    config.include Devise::Test::IntegrationHelpers, type: :features
-   config.include Devise::Test::IntegrationHelpers, type: :request
    config.include FactoryGirl::Syntax::Methods
 
    # If you're not using ActiveRecord, or you'd prefer not to run each of your

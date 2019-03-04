@@ -10,6 +10,7 @@ RSpec.feature "Visit single donation", :type => :feature do
       page.find(".single-donation-card").click
       expect(page).to have_selector('body .modal')
       page.find('.viewing a').click
+      #TODO
       #expect(page).to have_selector("#single-donation-content p", text: donation.details)
    end
 end

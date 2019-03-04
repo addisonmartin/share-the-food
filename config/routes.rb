@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   resources :donations do
      collection do
-        get 'global'
+        get 'san_luis_obispo_county'
+        get 'santa_barbara_county'
      end
   end
 end

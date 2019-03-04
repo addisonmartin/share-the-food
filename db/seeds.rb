@@ -23,38 +23,49 @@ def seed_users
 end
 
 def seed_regions
-   Region.create(name: "Global")
+   slo_cities = ["San Luis Obispo", "Grover Beach", "AG"]
+   sb_cities = ["Santa Barbara", "SB City 2", "SB City 3"]
+
+   slo_cities.each do |city_name|
+      Region.create(name: "San Luis Obispo County", city: city_name)
+   end
+
+   sb_cities.each do |city_name|
+      Region.create(name: "Santa Barbara County", city: city_name)
+   end
 end
 
 def seed_donations
    regions = Region.all
    donation_id = 0
 
-   25.times do
-      Donation.create(
-         name: "donation#{donation_id}",
-         details: "donation details#{donation_id}",
-         fresh_until: Time.new(1999),
-         latitude: -1.1,
-         longitude: 1.1,
-         pickup_notes: "donation pickup notes #{donation_id}",
-         is_perishable: true,
-         requires_preparation: true,
-         is_vegetarian: true,
-         is_vegan: true,
-         is_gluten_free: true,
-         contains_peanut: true,
-         contains_treenut: true,
-         contains_dairy: true,
-         contains_soy: true,
-         contains_egg: true,
-         contains_fish: true,
-         contains_shellfish: true,
-         user_id: rand(1..9),
-         region_id: regions[0].id
-      )
+   regions.each do |region|
+      3.times do
+         Donation.create(
+            name: "donation#{donation_id}",
+            details: "donation details#{donation_id}",
+            fresh_until: Time.new(1999),
+            latitude: -1.1,
+            longitude: 1.1,
+            pickup_notes: "donation pickup notes #{donation_id}",
+            is_perishable: true,
+            requires_preparation: true,
+            is_vegetarian: true,
+            is_vegan: true,
+            is_gluten_free: true,
+            contains_peanut: true,
+            contains_treenut: true,
+            contains_dairy: true,
+            contains_soy: true,
+            contains_egg: true,
+            contains_fish: true,
+            contains_shellfish: true,
+            user_id: rand(1..9),
+            region_id: region.id
+         )
 
-      donation_id = donation_id + 1
+         donation_id = donation_id + 1
+      end
    end
 end
 

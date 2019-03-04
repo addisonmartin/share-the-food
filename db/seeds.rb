@@ -40,7 +40,7 @@ def seed_donations
    donation_id = 0
 
    regions.each do |region|
-      3.times do
+      50.times do
          Donation.create(
             name: "donation#{donation_id}",
             details: "donation details#{donation_id}",

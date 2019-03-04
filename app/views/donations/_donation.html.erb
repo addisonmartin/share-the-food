@@ -1,15 +1,1 @@
-<div class="col-sm-3 single-donation-card" id=<%= donation_path(donation.id) %>>
-   <div class="card">
-      <div class="card-block">
-         <h4 class="donation-text">
-            <%= truncate(donation.name, :length => 60) %>
-         </h4>
-         <div class="donation-content">
-            <div class="donated-by">Donated By: <%= donation.user.name %></div>
-            <h3> <%= donation.name %> </h3>
-            <p> <%= donation.details %> </p>
-            <%= link_to "View Donation", donation_path(donation.id), class: 'viewing' %>
-         </div>
-      </div>
-   </div>
-</div>
+<%= render donation_format_partial_path, donation: donation %>

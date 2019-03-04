@@ -18,4 +18,8 @@ module DonationsHelper
    def no_donations_partial_path
       @donations.empty? ? 'donations/region/no_donations' : 'shared/empty_partial'
    end
+
+   def donation_format_partial_path
+      current_page?(root_path) ? 'donations/donation/home_page' : 'donations/donation/region_page'
+   end
 end

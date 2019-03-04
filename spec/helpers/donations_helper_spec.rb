@@ -37,4 +37,16 @@ RSpec.describe DonationsHelper, :type => :helper do
          expect(helper.no_donations_partial_path).to (eq 'shared/empty_partial')
       end
    end
+   
+   context '#donation_format_partial_path' do
+      it "returns a home_page partial path" do
+         helper.stub(:current_page?).and_return(true)
+         expect(helper.donation_format_partial_path).to (eq 'donations/donation/home_page')
+      end
+      
+      it "returns a region_page partial path" do
+         helper.stub(:current_page?).and_return(false)
+         expect(helper.donation_format_partial_path).to (eq 'donations/donation/region_page')
+      end
+   end
 end

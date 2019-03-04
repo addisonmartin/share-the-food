@@ -27,11 +27,11 @@ def seed_regions
    sb_cities = ["Santa Barbara", "SB City 2", "SB City 3"]
 
    slo_cities.each do |city_name|
-      Region.create(name: "San Luis Obispo County", city: city_name)
+      Region.create(name: "san_luis_obispo_county", city: city_name)
    end
 
    sb_cities.each do |city_name|
-      Region.create(name: "Santa Barbara County", city: city_name)
+      Region.create(name: "santa_barbara_county", city: city_name)
    end
 end
 

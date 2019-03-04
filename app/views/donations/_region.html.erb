@@ -1,0 +1,21 @@
+<div id="region-main-content" class="container">
+   <div class="row">
+      <h1 class="page-title"><%= page_title %> </h1>
+      <%= render 'donations/region/create_new_donation', region: region %>
+   </div>
+
+   <div class="row">
+      <%= render 'donations/region/cities', region: region %>
+   </div>
+
+   <div class="row">
+      <div class="col-sm-12", id="feed">
+         <%= render @donations %>
+         <%= render no_donations_partial_path %>
+      </div>
+   </div>
+
+   <div class="infinte-scroll">
+      <%= will_paginate @donations %>
+   </div>
+</div>

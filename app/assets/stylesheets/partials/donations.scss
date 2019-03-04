@@ -23,3 +23,21 @@
 .donation-content {
    display: none;
 }
+
+.solid-color-mode, .border-color-mode {
+   .donation-text {
+      text-align: center;
+   }
+}
+
+.solid-color-mode {
+   .donation-text {
+      padding: 10px;
+      background-color: white;
+      border-radius: 25px;
+   }
+}
+
+.border-color-mode {
+   background-color: white;
+}

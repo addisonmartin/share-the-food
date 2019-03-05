@@ -19,6 +19,19 @@ class DonationsController < ApplicationController
    end
 
    def get_donations
-      Donation.limit(30)
+      region = params[:action]
+      search = params[:search]
+      city = params[:city]
+
+      if city.blank? && search.blank?
+         donations = Donation.by_region(region).all
+      elsif city.blank? && search.present?
+         donations = Donation.by_region(region).search(search)
+      elsif city.present? && search.blank?
+         donations = Donation.by_city(region, city)
+      elsif city.present? && search.present?
+         donations = Donation.by_city(region, city).search(search)
+      else
+      end
    end
 end

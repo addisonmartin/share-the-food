@@ -12,8 +12,8 @@ def seed_users
    user_id = 0
    10.times do
       User.create(
-         name: "test#{user_id}",
-         email: "test#{user_id}@test.com",
+         name: "fake user #{user_id}",
+         email: "user#{user_id}@email.com",
          password: "123456",
          password_confirmation: "123456"
       )
@@ -23,8 +23,8 @@ def seed_users
 end
 
 def seed_regions
-   slo_cities = ["San Luis Obispo", "Grover Beach", "AG"]
-   sb_cities = ["Santa Barbara", "SB City 2", "SB City 3"]
+   slo_cities = ["San Luis Obispo", "Paso Robles", "Atascadero", "Arroyo Grande", "Grover Beach"]
+   sb_cities = ["Santa Maria", "Santa Barbara", "Lompoc", "Goleta", "Carpinteria"]
 
    slo_cities.each do |city_name|
       Region.create(name: "san_luis_obispo_county", city: city_name)

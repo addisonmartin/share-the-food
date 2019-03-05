@@ -16,6 +16,11 @@ class DonationsController < ApplicationController
    def donations_for_region(region)
       @cities = Region.where(name: region)
       @donations = get_donations.paginate(page: params[:page])
+
+      respond_to do |format|
+         format.html
+         format.js { render partial: 'donations/donations_pagination_page' }
+      end
    end
 
    def get_donations

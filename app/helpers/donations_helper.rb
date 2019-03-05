@@ -30,4 +30,12 @@ module DonationsHelper
          'shared/empty_partial'
       end
    end
+
+   def update_pagination_partial_path
+      if @donations.next_page
+         'donations/donations_pagination_page/update_pagination'
+      else
+         'donations/donations_pagination_page/remove_pagination'
+      end
+   end
 end

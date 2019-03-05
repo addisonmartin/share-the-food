@@ -15,8 +15,8 @@ module DonationsHelper
       end
    end
 
-   def no_donations_partial_path
-      @donations.empty? ? 'donations/region/no_donations' : 'shared/empty_partial'
+   def no_donations_partial_path(donations)
+      donations.empty? ? 'donations/shared/no_donations' : 'shared/empty_partial'
    end
 
    def donation_format_partial_path

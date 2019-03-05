@@ -2,6 +2,10 @@ class Donation < ApplicationRecord
    belongs_to :user
    belongs_to :region
 
+   validates :name, presence: true
+   validates :details, presence: true
+   validates :region_id, presence: true
+
    default_scope -> { includes(:user).order(created_at: :desc)}
 
    scope :by_city, -> (region, city_name) do

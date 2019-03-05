@@ -50,4 +50,32 @@ RSpec.describe Donation, type: :model do
          expect(Donation.search('james').count).to eq 0
       end
    end
+
+   context "Validations" do
+      let(:donation) { build(:donation) }
+
+      it "creates successfully" do
+         expect(donation).to be_valid
+      end
+
+      it "is not valid without a city" do
+         donation.region_id = nil
+         expect(donation).not_to be_valid
+      end
+
+      it "is not valid without a name" do
+         donation.name = nil
+         expect(donation).not_to be_valid
+      end
+
+      it "is not valid without details" do
+         donation.details = nil
+         expect(donation).not_to be_valid
+      end
+
+      it "is not valid without a user_id" do
+         donation.user_id = nil
+         expect(donation).not_to be_valid
+      end
+   end
 end

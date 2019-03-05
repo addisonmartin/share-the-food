@@ -1,7 +1,7 @@
 <%= bootstrap_form_for(@donation) do |f| %>
-   <%= f.text_field :name, placeholder: "Name of Donation", class: "form-control", required: true, minlength: 5, maxlength: 100 %>
+   <%= f.text_field :name, placeholder: "Name of Donation", class: "form-control", required: true %>
    <%= f.hidden_field :region, :value => @region %>
-   <%= f.text_area :details, rows: 6, required: true, minlength: 20, maxlength: 1000, placeholder: "Describe your donation.", class: "form-control" %>
-   <%= f.collection_select :region, @cities, :id, :city, class: 'form-control' %>
+   <%= f.text_area :details, rows: 6, required: true, placeholder: "Describe your donation.", class: "form-control" %>
+   <%= f.collection_select :region_id, @cities, :id, :city, class: 'form-control' %>
    <%= f.submit "Upload your Donation", class: "form-control" %>
 <% end %>

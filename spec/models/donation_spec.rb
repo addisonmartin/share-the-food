@@ -12,4 +12,12 @@ RSpec.describe Donation, type: :model do
          expect(association).to eq :belongs_to
       end
    end
+
+   context 'Sscopes' do
+      it 'default_scope orders by descending created_at order' do
+         first_donation = create(:donation)
+         second_donation = create(:donation)
+         expect(Donation.all).to eq [second_donation, first_donation]
+      end
+   end
 end

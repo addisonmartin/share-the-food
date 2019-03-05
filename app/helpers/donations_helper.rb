@@ -22,4 +22,12 @@ module DonationsHelper
    def donation_format_partial_path
       current_page?(root_path) ? 'donations/donation/home_page' : 'donations/donation/region_page'
    end
+
+   def city_field_partial_path
+      if params[:city].present?
+         'donations/region/search_form/city_field'
+      else
+         'shared/empty_partial'
+      end
+   end
 end

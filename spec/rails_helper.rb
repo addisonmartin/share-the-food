@@ -78,3 +78,8 @@ RSpec.configure do |config|
    # arbitrary gems may also be filtered via:
    # config.filter_gems_from_backtrace("gem name")
 end
+
+# Tells Capybara that going to this URL (for icons) is okay.
+Capybara::Webkit.configure do |config|
+   config.allow_url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+end

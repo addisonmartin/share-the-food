@@ -75,7 +75,7 @@ group :test do
    gem 'headless', '~> 2.3.1'
    # Adds support for Capybara system testing and selenium driver
    gem 'capybara', '>= 2.15'
-   gem 'poltergeist', '~> 1.18.1'
+   gem 'capybara-webkit'
    gem 'database_cleaner', '~> 1.7.0'
    gem 'selenium-webdriver', '~> 3.141.0'
    # Easy installation and use of chromedriver to run system tests with Chrome

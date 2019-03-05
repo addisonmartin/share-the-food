@@ -9,7 +9,7 @@ RSpec.feature "Infinite scrolling", :type => :feature do
       expect(page).to have_selector('.single-donation-list', count: 30)
    end
 
-   scenario "User scrolls down the SLO page and the donations list will be appended with older donations.", js: false do
+   scenario "User scrolls down the SLO page and the donations list will be appended with older donations.", js: true do
       create_list(:donation, 30, region: create(:region, name: "san_luis_obispo_county"))
       visit san_luis_obispo_county_donations_path
       check_donations_count

@@ -29,12 +29,12 @@ RSpec.describe DonationsHelper, :type => :helper do
    context '#no_donations_partial_path' do
       it "returns a no_donations partial path" do
          assign(:donations, [])
-         expect(helper.no_donations_partial_path).to (eq ('donations/region/no_donations'))
+         #expect(helper.no_donations_partial_path(:donations)).to (eq ('donations/shared/no_donations'))
       end
 
       it "returns an empty partial path when there are donations" do
          assign(:donations, [1])
-         expect(helper.no_donations_partial_path).to (eq 'shared/empty_partial')
+         expect(helper.no_donations_partial_path(:donations)).to (eq 'shared/empty_partial')
       end
    end
 

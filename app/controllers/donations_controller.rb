@@ -1,4 +1,22 @@
 class DonationsController < ApplicationController
+
+   before_action :redirect_if_not_signed_in, only: [:new]
+
+   def new
+      @region = params[:region]
+      @cities = Region.where(name: @region)
+      @donation = Donation.new
+   end
+
+   def create
+      @donation = Donation.new(donation_params)
+      if @donation.save
+         redirect_to donation_path(@donation)
+      else
+         redirect_to root_path
+      end
+   end
+
    def show
       @donation = Donation.find(params[:id])
    end
@@ -38,5 +56,9 @@ class DonationsController < ApplicationController
          donations = Donation.by_city(region, city).search(search)
       else
       end
+   end
+
+   def donation_params
+      params.require(:donation).permit(:name, :details, :region_id).merge(user_id: current_user.id)
    end
 end

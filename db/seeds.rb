@@ -40,7 +40,7 @@ def seed_donations
    donation_id = 0
 
    regions.each do |region|
-      50.times do
+      25.times do
          Donation.create(
             name: "donation#{donation_id}",
             details: "donation details#{donation_id}",
@@ -49,18 +49,18 @@ def seed_donations
             longitude: 1.1,
             pickup_notes: "donation pickup notes #{donation_id}",
             is_perishable: true,
-            requires_preparation: true,
+            requires_preparation: false,
             is_vegetarian: true,
             is_vegan: true,
-            is_gluten_free: true,
-            contains_peanut: true,
+            is_gluten_free: false,
+            contains_peanut: false,
             contains_treenut: true,
-            contains_dairy: true,
+            contains_dairy: false,
             contains_soy: true,
             contains_egg: true,
-            contains_fish: true,
-            contains_shellfish: true,
-            user_id: rand(1..9),
+            contains_fish: false,
+            contains_shellfish: false,
+            user_id: rand(0..9),
             region_id: region.id
          )
 

@@ -3,5 +3,22 @@
    <%= f.hidden_field :region, :value => @region %>
    <%= f.text_area :details, rows: 6, required: true, placeholder: "Describe your donation.", class: "form-control" %>
    <%= f.collection_select :region_id, @cities, :id, :city, class: 'form-control' %>
+   <div class="form-group" id="fresh_until_datetime">
+      <%= f.label :fresh_until, "Select when this donation is no longer fresh, at which point you should delete your donation." %>
+      <div class='input-group date' id='datetimepicker'>
+         <%= f.text_field :fresh_until, :class => "form-control"%>
+         <span class="input-group-addon">
+         <span class="glyphicon glyphicon-calendar"></span>
+         </span>
+      </div>
+   </div>
+   <script type="text/javascript">
+      $(function () {
+         $('#datetimepicker').datetimepicker({
+            defaultDate: "<%= @donation.fresh_until %>",
+            format: "YYYY-MM-DD hh:mm a Z"
+         });
+      });
+   </script>
    <%= f.submit "Upload your Donation", class: "form-control" %>
 <% end %>

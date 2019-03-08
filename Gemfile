@@ -51,6 +51,10 @@ gem 'devise', '~> 4.6.1'
 # Used to paginate when viewing donations.
 gem 'will_paginate', '~> 3.1.6'
 
+# Used to select a date and time.
+gem 'momentjs-rails', '~> 2.20.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
 group :development, :test do
    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
    gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

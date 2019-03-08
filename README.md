@@ -11,5 +11,5 @@ However, to quote Github:
 Note, this is the 4th git repository to host a version of this project.
 The first repo was for a class group project, for Android (and iOS and web from the others).
 The second repo was when the Android and iOS versions were migrated to one Flutter implementation.
-The third repo was when I switched from developing for the app to the web using Ruby on Rails.
+The third repo was when I began solo development on the project, focusing just on the web using Ruby on Rails.
 This, the fourth repo, was after a technology stack change within Rails and swapping the cloud host.

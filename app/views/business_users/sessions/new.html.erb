@@ -5,7 +5,6 @@
 
          <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-            <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: 'Business Name' %>
             <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
             <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
 

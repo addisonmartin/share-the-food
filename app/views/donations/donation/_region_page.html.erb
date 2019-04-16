@@ -1,9 +1,0 @@
-<div class="single-donation-list" id=<%= donation_path(donation.id) %>>
-   <%= truncate(donation.name, :length => 60) %>
-   <div class="donation-content">
-      <div class="donated-by">Donated by <%= donation.user.name %> </div>
-      <h3> <%= donation.name %> </h3>
-      <p> <%= donation.details %> </p>
-      <%= link_to "View Donation", donation_path(donation.id), class: 'viewing' %>
-   </div>
-</div>

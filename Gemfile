@@ -39,6 +39,11 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sass-rails', '~> 5.0.7'
 # Required by bootstrap
 gem 'jquery-rails', '~> 4.3.3'
+# Required by the bootstrap_form_for in .erb
+gem 'bootstrap_form', '~> 4.2.0'
+
+# Used for user authentication
+gem 'devise', '~> 4.6.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

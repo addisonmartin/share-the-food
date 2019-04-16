@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#index'
 
-  resource :donations do
-
+  resources :donations do
+    
   end
+
 end

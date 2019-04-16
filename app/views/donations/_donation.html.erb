@@ -1,4 +1,4 @@
-<div class="col-sm-3 single-donation-card" id=<%= donations_path(donation.id) %>>
+<div class="col-sm-3 single-donation-card" id=<%= donation_path(donation.id) %>>
   <div class="card">
     <div class="card-block">
 
@@ -9,7 +9,7 @@
       <div class="donation-description">
         <div class="donated-by">Donated by <%= donation.user.name %> </div>
         <p> <%= donation.description %></p>
-        <%= link_to "View Donation", donations_path(donation.id), class: "viewing" %>
+        <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
       </div>
 
     </div>

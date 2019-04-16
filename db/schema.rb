@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_072813) do
+ActiveRecord::Schema.define(version: 2019_04_16_111905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,31 @@ ActiveRecord::Schema.define(version: 2019_04_16_072813) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_business_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_business_users_on_reset_password_token", unique: true
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.text "description"
+    t.datetime "fresh_until"
+    t.float "latitude"
+    t.float "longitude"
+    t.text "pickup_notes"
+    t.boolean "is_perishable"
+    t.boolean "requires_preparation"
+    t.boolean "is_vegetarian"
+    t.boolean "is_vegan"
+    t.boolean "is_gluten_free"
+    t.boolean "contains_peanut"
+    t.boolean "contains_treenut"
+    t.boolean "contains_dairy"
+    t.boolean "contains_soy"
+    t.boolean "contains_egg"
+    t.boolean "contains_fish"
+    t.boolean "contains_shellfish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

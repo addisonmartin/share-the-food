@@ -1,20 +1,17 @@
 <nav class="navbar navbar-default navbar-fixed-top">
    <div class="container">
-      <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example=navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-         </button>
-         <%= link_to "Share the Food", root_path, class:'navbar-brand' %>
-      </div>
+      <div class="row">
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-         <ul class="nav navbar-nav">
-         </ul>
-         <ul class="nav navbar-right">
-         </ul>
+         <!-- Header elements visible all the time -->
+         <div class="col-sm-7">
+            <%= render 'layouts/navigation/header' %>
+         </div>
+
+         <!-- Header elemnents inside collapsible list -->
+         <div class="col-sm-5">
+            <%= render 'layouts/navigation/collapsible_list' %>
+         </div>
+
       </div>
    </div>
 </nav>

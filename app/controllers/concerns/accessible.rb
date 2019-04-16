@@ -6,6 +6,8 @@ module Accessible
       before_action :check_user
    end
 
+   protected
+
    def check_user
       if current_business_user
          flash.clear

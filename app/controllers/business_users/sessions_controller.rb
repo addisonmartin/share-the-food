@@ -1,6 +1,3 @@
-
-# frozen_string_literal: true
-
 class BusinessUsers::SessionsController < Devise::SessionsController
    include Accessible
 

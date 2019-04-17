@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function() {
     $('.modal-header .donated-by').text(donated_by);
     $('.loaded-data h3').text(donation_header);
     $('.loaded-data p').text(donation_description);
-    $('.loaded-data .viewing a').attr('href', 'viewing');
+    $('.loaded-data .viewing a').attr('href', viewing);
 
     $('.myModal').modal('show');
 

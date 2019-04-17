@@ -9,7 +9,9 @@
       <div class="donation-description">
         <div class="donated-by">Donated by <%= donation.user.name %> </div>
         <p> <%= donation.description %></p>
-        <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
+        <button>
+          <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
+        </button>
       </div>
 
     </div>

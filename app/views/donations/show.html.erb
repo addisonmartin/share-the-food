@@ -3,7 +3,86 @@
     <div class="col-sm-6 col-sm-offset-3">
       <div class="donated-by">Donated by <%= @donation.user.name %> </div>
       <h3> <%= @donation.name %> </h3>
-      <p> <%= @donation.description %> </p>
+      <p> Description: <%= @donation.description %> </p>
+      <p> Fresh Until: <%= @donation.fresh_until %> </p>
+      <p> Latitude: <%= @donation.latitude %> </p>
+      <p> Longitude: <%= @donation.longitude %> </p>
+      <p> Pickup Notes: <%= @donation.pickup_notes %> </p>
+
+      Allergen Information:
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.is_perishable id="isPerishableCheckbox">
+        <label class="form-check-label" for="isPerishableCheckbox">
+          Is perishable?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.requires_preparation id="requiresPreparationCheckbox">
+        <label class="form-check-label" for="requiresPreparationCheckbox">
+          Requires preparation?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.is_vegetarian id="isVegetarianCheckbox">
+        <label class="form-check-label" for="isVegetarianCheckbox">
+          Is vegetarian?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.is_vegan id="isVeganCheckbox">
+        <label class="form-check-label" for="isVeganCheckbox">
+          Is vegan?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.is_gluten_free id="isGlutenFreeCheckbox">
+        <label class="form-check-label" for="isGlutenFreeCheckbox">
+          Is gluten free?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_peanut id="containsPeanutCheckbox">
+        <label class="form-check-label" for="containsPeanutCheckbox">
+          Contains peanuts?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_treenut id="containsTreenutCheckbox">
+        <label class="form-check-label" for="containsTreenutCheckbox">
+          Contains treenuts?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_dairy id="containsDairyCheckbox">
+        <label class="form-check-label" for="containsDairyCheckbox">
+          Contains dairy?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_soy id="containsSoyCheckbox">
+        <label class="form-check-label" for="containsSoyCheckbox">
+          Contains soy?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_egg id="containsEggCheckbox">
+        <label class="form-check-label" for="containsEggCheckbox">
+          Contains eggs?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_fish id="containsFishCheckbox">
+        <label class="form-check-label" for="containsFishCheckbox">
+          Contains fish?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value=@donation.contains_shellfish id="containsShellfishCheckbox">
+        <label class="form-check-label" for="containsShellfishCheckbox">
+          Contains shellfish?
+        </label>
+      </div>
+
     </div>
   </div>
 </div>

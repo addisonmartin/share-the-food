@@ -128,4 +128,30 @@ class DonationTest < ActiveSupport::TestCase
     assert_not donation.save, "Saved the donation without a contains shellfish value."
   end
 
+  test "should save a fully valid donation" do
+    donation = Donation.new
+
+    donation.user = users(:default_user)
+    donation.name = "Donation"
+    donation.description = "Description"
+    donation.fresh_until = Time.now
+    donation.latitude = 0
+    donation.longitude = 0
+    donation.pickup_notes = "Pickup notes"
+    donation.is_perishable = true
+    donation.requires_preparation = true
+    donation.is_vegetarian = true
+    donation.is_vegan = true
+    donation.is_gluten_free = true
+    donation.contains_peanut = true
+    donation.contains_treenut = true
+    donation.contains_dairy = true
+    donation.contains_soy = true
+    donation.contains_egg = true
+    donation.contains_fish = true
+    donation.contains_shellfish = true
+
+    assert donation.save, "Did not save a valid donation."
+  end
+
 end

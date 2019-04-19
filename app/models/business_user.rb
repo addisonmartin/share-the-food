@@ -6,4 +6,8 @@ class BusinessUser < ApplicationRecord
 
   has_many :donations, dependent: :destroy
 
+  validates_presence_of :name
+  validates_presence_of :email
+  validates_presence_of :encrypted_password
+
 end

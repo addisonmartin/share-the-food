@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+- jruby-19mode
+- rbx-2
+script:
+- bundle install
+- rails test

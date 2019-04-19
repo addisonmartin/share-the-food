@@ -1,4 +1,4 @@
 language: ruby
 script:
 - bundle install
-- rails test
+- bundle exec rails test

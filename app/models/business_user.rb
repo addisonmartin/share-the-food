@@ -5,4 +5,5 @@ class BusinessUser < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :donations, dependent: :destroy
+
 end

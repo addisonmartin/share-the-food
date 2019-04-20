@@ -27,7 +27,9 @@ def seed_donations
   times = [Time.new(2000, 6, 15), Time.new(2019, 12, 31), Time.new(2022, 1, 05)]
 
   100.times do
-    Donation.create(user_id: rand(10), name: "#{names[rand(names.length)]}", description: "This is a delicious #{names[rand(names.length)]}!",
+    n = names[rand(names.length)]
+
+    Donation.create(user_id: rand(10), name: n, description: "This is a delicious #{n}!",
                     fresh_until: times[rand(times.length)], latitude: 10.0, longitude: -22.2, pickup_notes: "Meet me at these coordinates. Bring a bag.", is_perishable: rand(2).even?, requires_preparation: rand(2).even?,
                     is_vegetarian: rand(2).even?, is_vegan: rand(2).even?, is_gluten_free: rand(2).even?, contains_peanut: rand(2).even?,
                     contains_treenut: rand(2).even?, contains_dairy: rand(2).even?, contains_soy: rand(2).even?, contains_egg: rand(2).even?,

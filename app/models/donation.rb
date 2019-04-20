@@ -25,4 +25,8 @@ class Donation < ApplicationRecord
 
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
+  scope :search, -> (search) do
+    where("name ILIKE lower(?) OR description ILIKE lower(?)", "%#{search}%", "%#{search}%")
+  end
+
 end

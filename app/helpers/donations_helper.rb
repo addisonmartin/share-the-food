@@ -4,8 +4,4 @@ module DonationsHelper
     @donations.empty? ? 'donations/no_donations' : 'shared/empty_partial'
   end
 
-  def donations_path
-
-  end
-
 end

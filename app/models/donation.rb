@@ -23,4 +23,6 @@ class Donation < ApplicationRecord
   validates_inclusion_of :contains_fish, in: [true, false]
   validates_inclusion_of :contains_shellfish, in: [true, false]
 
+  default_scope -> { includes(:user).order(fresh_until: :asc) }
+
 end

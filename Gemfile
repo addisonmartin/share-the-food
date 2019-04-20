@@ -54,6 +54,9 @@ gem 'travis', '~> 1.8.9'
 # Helper gem used to verify a .travis.yml file is valid.
 gem 'travis-lint', '~> 2.0.0'
 
+# Used to audit the Gemfile for security vulnerabilities
+gem 'bundler-audit', '~> 0.6.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

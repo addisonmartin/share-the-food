@@ -45,13 +45,13 @@ gem 'bootstrap_form', '~> 4.2.0'
 # Used for user authentication
 gem 'devise', '~> 4.6.2'
 
-# Used to show donations across multiple pages.
+# Used to show donations across multiple pages
 gem 'will_paginate', '~> 3.1.7'
 
 # Used for continuous integration
 gem 'travis', '~> 1.8.9'
 
-# Helper gem used to verify a .travis.yml file is valid.
+# Helper gem used to verify a .travis.yml file is valid
 gem 'travis-lint', '~> 2.0.0'
 
 # Used to audit the Gemfile for security vulnerabilities
@@ -72,6 +72,9 @@ group :development do
 
   # Used to automatically generate entity-relationship diagram
   gem 'rails-erd', '~> 1.5.2'
+
+  # Used to annotate source code with comments describing the datbase schema
+  gem 'annotate', '~> 2.7.4'
 end
 
 group :test do

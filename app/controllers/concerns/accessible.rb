@@ -1,5 +1,6 @@
 # Used by devise to prevent users and business_users from being able to interact on each others session pages
-module Accessible extend ActiveSupport::Concern
+module Accessible
+  extend ActiveSupport::Concern
 
    included do
       before_action :check_user

@@ -24,7 +24,7 @@ You will need:
 * Ruby, or a Ruby language version manager such as rbenv.
 * Ruby on Rails.
 
-### Installation
+### Cloning the Project
 
 First, clone the repository onto your local machine.
 
@@ -43,6 +43,8 @@ Next, checkout a branch other than master, as it is protected.
 ```
 git checkout development
 ```
+
+### Installation
 
 Install all the project's dependencies (Rubygems) using Bundler.
 
@@ -89,7 +91,6 @@ localhost:3000
 ```
 
 Press crtl+c to stop the server.
-
 
 ## Testing
 

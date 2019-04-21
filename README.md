@@ -38,6 +38,12 @@ Navigate into the project's root folder.
 cd share-the-food/
 ```
 
+Next, checkout a branch other than master, as it is protected.
+
+```
+git checkout development
+```
+
 Install all the project's dependencies (Rubygems) using Bundler.
 
 ```

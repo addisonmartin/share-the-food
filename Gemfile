@@ -14,8 +14,6 @@ gem 'uglifier', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'mini_racer', '~> 0.2.0', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -74,15 +72,13 @@ group :development do
   gem 'rails-erd', '~> 1.5.0'
 
   # Used to annotate source code with comments describing the datbase schema
+  gem 'annotate', '~> 2.7.0'
 end
-gem 'annotate', '~> 2.7.0'
 
 group :test do
+  gem 'webdrivers', '~> 3.8.0'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 3.17.0'
-  gem 'selenium-webdriver', '~> 3.141.0'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper', '~> 2.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

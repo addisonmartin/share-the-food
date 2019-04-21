@@ -100,7 +100,7 @@ rails test
 
 ### Continuous Integration
 
-Continuous integration is preformed by Travis CI. [It can be found here.](https://travis-ci.org/addisonmartin/share-the-food)
+Continuous integration is performed by Travis CI. [It can be found here.](https://travis-ci.org/addisonmartin/share-the-food)
 
 ## Deployment
 

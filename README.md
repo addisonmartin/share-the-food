@@ -99,6 +99,7 @@ Run all the tests.
 
 ```
 rails test
+rails test:system
 ```
 
 ### Continuous Integration

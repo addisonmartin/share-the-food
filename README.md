@@ -96,7 +96,7 @@ Continuous integration is preformed by Travis CI. [It can be found here.](https:
 
 ## Deployment
 
-This project is deployed on a Heroku dyno. Deployment happens after each push to the master branch, where the Travis CI tests also all passed. As such, branch protections have been setup for master. There is no need to manually deploy to Heroku. Simply checkout a new branch, make your changes, and submit a pull request into master. If everything checks out, your changes will be deployed.
+This project is deployed on a Heroku dyno. Deployment happens after each push to the master branch, where the Travis CI tests also all passed. As such, branch protections have been setup for master. There is no need to manually deploy to Heroku. Simply checkout a new branch, make your changes, and submit a pull request into master. If all tests pass and your changes are approved, then your changes will be deployed.
 
 ## Built With
 

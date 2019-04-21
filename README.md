@@ -53,6 +53,12 @@ bundle exec rake db:seed
 
 ### Launching the Server
 
+Navigate into the project's root folder.
+
+```
+cd share-the-food/
+```
+
 Start the server.
 
 ```

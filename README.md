@@ -2,6 +2,9 @@
 
 Share the Food is a web app that aims to connect those who want food, with those who don't want to waste food. Anyone with extra food can create an account and upload a donation. Anyone who wants food, without needing an account, can view all the donations nearby.
 
+For more details, [visit the project wiki.](https://github.com/addisonmartin/share-the-food/wiki)
+For project planning and coordination, [visit the project board.](https://github.com/addisonmartin/share-the-food/projects/1)
+
 **Table of Contents:**
 * [Setting up Development Environment](https://github.com/addisonmartin/share-the-food/blob/master/README.md#setting-up-development-environment)
 * [Testing](https://github.com/addisonmartin/share-the-food/blob/master/README.md#testing)
@@ -33,6 +36,12 @@ Navigate into the project's root folder.
 
 ```
 cd share-the-food/
+```
+
+Next, checkout a branch other than master, as it is protected.
+
+```
+git checkout development
 ```
 
 Install all the project's dependencies (Rubygems) using Bundler.
@@ -96,6 +105,7 @@ Run all the tests.
 
 ```
 rails test
+rails test:system
 ```
 
 ### Continuous Integration

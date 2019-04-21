@@ -1,6 +1,10 @@
 language: ruby
-before_install:
-- google-chrome-stable --headless
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 script:
 - bundle install
 - bundle exec rails db:create

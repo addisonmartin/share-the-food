@@ -116,9 +116,9 @@ This project is deployed on a Heroku dyno. Deployment happens after each push to
 
 ## Contributing
 
-Contributions are welcomed, and needed! All contributions must be submited through a pull request on Github. All changes will be published under the GNU GPU v3 license, as this is what the project is licensed under.
+Contributions are welcomed, and needed! All contributions must be submitted through a pull request on Github. All changes will be published under the GNU GPU v3 license, as this is what the project is licensed under.
 
-Also see the list of [project contributors.](https://github.com/addisonmartin/share-the-food/contributors)
+Also, see the list of [project contributors.](https://github.com/addisonmartin/share-the-food/contributors)
 
 ## License
 

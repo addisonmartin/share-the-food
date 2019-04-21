@@ -2,6 +2,8 @@
 
 Share the Food is a web app that aims to connect those who want food, with those who don't want to waste food. Anyone with extra food can create an account and upload a donation. Anyone who wants food, without needing an account, can view all the donations nearby.
 
+For more details, (visit the wiki!)[https://github.com/addisonmartin/share-the-food/blob/master/wiki]
+
 **Table of Contents:**
 * [Setting up Development Environment](https://github.com/addisonmartin/share-the-food/blob/master/README.md#setting-up-development-environment)
 * [Testing](https://github.com/addisonmartin/share-the-food/blob/master/README.md#testing)

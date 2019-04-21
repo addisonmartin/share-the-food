@@ -92,11 +92,7 @@ rails test
 
 ### Continuous Integration
 
-Continuous integration is preformed by Travis CI.
-
-```
-https://travis-ci.org/addisonmartin/share-the-food
-```
+Continuous integration is preformed by Travis CI. [It can be found here.](https://travis-ci.org/addisonmartin/share-the-food)
 
 ## Deployment
 
@@ -122,4 +118,4 @@ See also the list of [contributors](https://github.com/addisonmartin/share-the-f
 
 ## License
 
-This project is licensed under the GNU GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL v3 License - see the [LICENSE](https://github.com/addisonmartin/share-the-food/blob/master/LICENSE) file for details

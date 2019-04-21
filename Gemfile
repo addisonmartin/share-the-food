@@ -72,8 +72,8 @@ group :development do
   gem 'rails-erd', '~> 1.5.0'
 
   # Used to annotate source code with comments describing the datbase schema
+  gem 'annotate', '~> 2.7.0'
 end
-gem 'annotate', '~> 2.7.0'
 
 group :test do
   gem 'webdrivers', '~> 3.8.0'

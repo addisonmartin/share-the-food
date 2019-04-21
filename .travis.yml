@@ -5,3 +5,5 @@ script:
 - bundle exec rails db:migrate
 - bundle exec rails test
 - bundle exec rails test:system
+addons:
+- chrome: stable

@@ -2,9 +2,10 @@ require "application_system_test_case"
 
 class VisitingHomePageTest < ApplicationSystemTestCase
 
-  test "visiting the root path" do
+  test "home page should have a button view and a button to add donations" do
     visit root_path
-    assert_selector "h1", text: "Nearby Donations"
+    assert_selector "button", text: "I want some food"
+    assert_selector "button", text: "I have extra food"
   end
 
 end

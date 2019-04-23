@@ -5,15 +5,15 @@
       <h4 class="donation-name">
         <%= truncate(donation.name, :length => 60) %>
       </h4>
-
-      <div class="donation-description">
-        <div class="donated-by">Donated by <%= donation.user.name %> </div>
-        <p> <%= donation.description %></p>
-        <button>
-          <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
-        </button>
-      </div>
-
+      <% if donation.user %>
+        <div class="donation-description">
+          <div class="donated-by">Donated by <%= donation.user.name %> </div>
+          <p> <%= donation.description %></p>
+          <button>
+            <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
+          </button>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

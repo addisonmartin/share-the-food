@@ -8,4 +8,9 @@ function initMap(lat, lng)
   };
 
   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  var marker =  new google.maps.Marker({
+    position: coords,
+    map: map
+  });
 }

@@ -2,6 +2,13 @@ function initMapForNew() {
   var lat = document.getElementById('donation_latitude').value;
   var lng = document.getElementById('donation_longitude').value;
 
+  if (!lat || !lng){
+        lat=51.5;
+        lng=-0.125;
+        document.getElementById('donation_latitude').value = lat;
+        document.getElementById('donation_longitude').value = lng;
+    }
+
   var coords = new google.maps.LatLng(lat, lng);
 
   var mapOptions = {

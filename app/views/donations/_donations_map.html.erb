@@ -1,0 +1,18 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    initMapForList(<%= @donations.to_json.html_safe %>)
+  });
+</script>
+
+
+<div class="container col-sm-8 col-sm-offset-2">
+
+  <div class=row>
+    <h1> Nearby Donations Map: </h1>
+  </div>
+
+  <div class="row">
+    <p> <div id="map3"></div> </p>
+  </div>
+
+</div>

@@ -1,4 +1,4 @@
-function initMap(lat, lng)
+function initMapForShow(lat, lng)
 {
   var coords = new google.maps.LatLng(lat, lng);
 

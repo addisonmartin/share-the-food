@@ -1,6 +1,6 @@
 require "application_system_test_case"
 
-class VisitingHomePageTest < ApplicationSystemTestCase
+class VisitingViewDonationsPageTest < ApplicationSystemTestCase
   test "view donations page should have a map to view all the donations" do
     visit root_path
     click_button "I want some food"

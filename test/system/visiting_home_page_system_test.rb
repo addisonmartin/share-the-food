@@ -14,15 +14,13 @@ class VisitingHomePageTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "Nearby Donations Map"
     assert_selector "h1", text: "Nearby Donations List"
-
   end
 
   test "clicking I have extra food, and not signed in, should take you to a why signup page" do
     visit root_path
     click_button "I want some food"
-
-    assert_selector "h1", text: "Nearby Donations"
-    # TODO WRITE THIS TEST!
+    #TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO!!!!!
+    assert_selector "h1", text: "Why make a donation?"
   end
 
 end

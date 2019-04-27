@@ -1,3 +1,7 @@
+<script>
+  document.addEventListener("DOMContentLoaded", initMapForNew);
+</script>
+
 <div class="container new-donation">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
@@ -11,6 +15,7 @@
 
         <%= f.text_field :latitude, placeholder: "Latitude", class:'form-control', rqeuired: true %>
         <%= f.text_field :longitude, placeholder: "Longitude", class:'form-control', rqeuired: true %>
+        <p> <div id="map2"></div></p>
         <%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 
         <h4> Allergn and Other Info: </h4>

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def show
-    render :file => "views/pages/home_page"
+    render :file => "pages/why_signup"
   end
 
 end

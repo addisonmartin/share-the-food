@@ -12,28 +12,14 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     visit root_path
     click_button "I want some food"
 
-    assert_selector "h1", text: "Nearby Donations"
-
-  end
-
-  test "viewing the default donations" do
-    visit root_path
-    click_button "I want some food"
-
-    assert_text "Default Business User Donation"
-    assert_text "Default User Donation"
-    assert_text "Donated by Default User"
-    assert_text "This is a donation. It was donated, by a user. ???"
-
-    assert_selector "button", text: "View Donation"
-
+    assert_selector "h1", text: "Nearby Donations Map"
+    assert_selector "h1", text: "Nearby Donations List"
   end
 
   test "clicking I have extra food, and not signed in, should take you to a why signup page" do
     visit root_path
-    click_button "I want some food"
-
-    assert_selector "h1", text: "Nearby Donations"
+    click_button "I have extra food"
+    assert_selector "h2", text: "An account is required to add a donation."
   end
 
 end

@@ -1,3 +1,9 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    initMapForShow(<%=@donation.latitude%>, <%=@donation.longitude%>)
+  });
+</script>
+
 <div id="single-donation-content" class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
@@ -5,8 +11,8 @@
       <h3> <%= @donation.name %> </h3>
       <p> Description: <%= @donation.description %> </p>
       <p> Fresh Until: <%= @donation.fresh_until %> </p>
-      <p> Latitude: <%= @donation.latitude %> </p>
-      <p> Longitude: <%= @donation.longitude %> </p>
+
+      <p> <div id="map"> </div> </p>
       <p> Pickup Notes: <%= @donation.pickup_notes %> </p>
 
       Allergen Information:

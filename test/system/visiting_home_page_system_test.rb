@@ -18,9 +18,8 @@ class VisitingHomePageTest < ApplicationSystemTestCase
 
   test "clicking I have extra food, and not signed in, should take you to a why signup page" do
     visit root_path
-    click_button "I want some food"
-    #TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO!!!!!
-    assert_selector "h1", text: "Why make a donation?"
+    click_button "I have extra food"
+    assert_selector "h2", text: "An account is required to add a donation."
   end
 
 end

@@ -59,6 +59,10 @@ gem 'bundler-audit', '~> 0.6.0'
 # Used to store environment variables in a file not tracked by git, for security.
 gem 'dotenv', '~> 2.7.0'
 
+# Used to support image upload stored on Cloudinary's servers.
+gem 'cloudinary', '~> 1.11.0', require: false
+gem 'activestorage-cloudinary-service', '~> 0.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.0.0', platforms: [:mri, :mingw, :x64_mingw]

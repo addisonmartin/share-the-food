@@ -22,4 +22,4 @@
 default_user:
   name: Default User
   email: user@email.com
-  encrypted_password: 123456789101112131415
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

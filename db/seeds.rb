@@ -30,7 +30,7 @@ def seed_donations
     n = names[rand(names.length)]
 
     Donation.create(user_id: rand(10), name: n, description: "This is a delicious #{n}!",
-                    fresh_until: times[rand(times.length)], latitude: (rand(180) - 90), longitude: (rand(360) - 180), pickup_notes: "Meet me at these coordinates. Bring a bag.", is_perishable: rand(2).even?, requires_preparation: rand(2).even?,
+                    fresh_until: times[rand(times.length)], latitude: (rand(170) - 85), longitude: (rand(360) - 180), pickup_notes: "Meet me at these coordinates. Bring a bag.", is_perishable: rand(2).even?, requires_preparation: rand(2).even?,
                     is_vegetarian: rand(2).even?, is_vegan: rand(2).even?, is_gluten_free: rand(2).even?, contains_peanut: rand(2).even?,
                     contains_treenut: rand(2).even?, contains_dairy: rand(2).even?, contains_soy: rand(2).even?, contains_egg: rand(2).even?,
                     contains_fish: rand(2).even?, contains_shellfish: rand(2).even?)

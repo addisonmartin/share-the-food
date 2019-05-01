@@ -34,6 +34,22 @@ class DonationsController < ApplicationController
 
   end
 
+  def edit
+  end
+
+  def update
+    if @donation.update(donation_params)
+      redirect_to @donation
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @donation.destroy
+    redirect_to root_path
+  end
+
   private
 
   def donation_params

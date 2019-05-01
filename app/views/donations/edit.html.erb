@@ -1,0 +1,12 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    initMapForEdit(<%=@donation.latitude%>, <%=@donation.longitude%>)
+  });
+</script>
+
+<div class="container edit-donation">
+
+  <h2>Edit your donation</h2>
+  <%= render 'form' %>
+
+</div>

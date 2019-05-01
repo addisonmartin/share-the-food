@@ -16,7 +16,7 @@ function initMapForNew() {
     zoom: 14
   };
 
-  var map = new google.maps.Map(document.getElementById('map2'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
   var marker = new google.maps.Marker({
     position: coords,

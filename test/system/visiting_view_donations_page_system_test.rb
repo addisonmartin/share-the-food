@@ -5,7 +5,7 @@ class VisitingViewDonationsPageTest < ApplicationSystemTestCase
     visit root_path
     click_button "I want some food"
 
-    assert_selector "div", id: "map3"
+    assert_selector "div", id: "map2"
 
   end
 

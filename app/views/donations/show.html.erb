@@ -53,6 +53,17 @@
       <div class="row">
         <%= check_box_tag :contains_shellfish, "t", @donation.contains_shellfish, options={disabled: true} %> <strong> Contains shellfish? </strong>
       </div>
+
+      <div clas="row">
+        <% if @donation.images.empty? %>
+          <h2> No images for this donation.</h2>
+        <% else %>
+          <% @donation.images.each do |image| %>
+          <%= image_tag url_for(image) %>
+          <%= link_to image.filename, rails_blob_path(image, disposition: "attachment") %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

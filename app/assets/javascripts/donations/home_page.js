@@ -15,7 +15,7 @@ function initMapForList(donations) {
     zoom: 14
   };
 
-  var map = new google.maps.Map(document.getElementById('map3'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('map2'), mapOptions);
 
   for (i = 0; i < donations.length; i++) {
     var markerCoords = new google.maps.LatLng(donations[i].latitude, donations[i].longitude);

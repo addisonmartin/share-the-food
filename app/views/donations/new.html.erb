@@ -2,88 +2,10 @@
   document.addEventListener("DOMContentLoaded", initMapForNew);
 </script>
 
+
 <div class="container new-donation">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
 
-      <h1>Add a new donation</h1>
+  <h1>Add a new donation</h1>
+  <%= render 'form' %>
 
-      <%= bootstrap_form_for(@donation) do |f| %>
-        <%= f.text_field :name, maxlength: 100, placeholder: 'Name of Donation', class:'form-control', required: true %>
-        <%= f.text_area :description, rows: 6, maxlength: 1000, placeholder: 'Describe your Donation', class:'form-control', required: true %>
-        <%= f.datetime_field :fresh_until, class: 'form-control', required: true %>
-
-        <%= f.text_field :latitude, placeholder: "Latitude", class:'form-control', rqeuired: true %>
-        <%= f.text_field :longitude, placeholder: "Longitude", class:'form-control', rqeuired: true %>
-        <p> <div id="map2"></div></p>
-        <%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
-
-        <h4> Allergn and Other Info: </h4>
-        <%= f.form_group :is_perishable, required: true do %>
-          <%= f.check_box :is_perishable, checked: true do %>
-            Is Perishable?
-          <% end %>
-        <% end %>
-        <%= f.form_group :requires_preparation, required: true do %>
-          <%= f.check_box :requires_preparation, checked: true do %>
-            Requires preparation?
-          <% end %>
-        <% end %>
-        <%= f.form_group :is_vegetarian, required: true do %>
-          <%= f.check_box :is_vegetarian, checked: true do %>
-            Is vegetarian?
-          <% end %>
-        <% end %>
-        <%= f.form_group :is_vegan, required: true do %>
-          <%= f.check_box :is_vegan, checked: true do %>
-            Is vegan?
-          <% end %>
-        <% end %>
-        <%= f.form_group :is_gluten_free, required: true do %>
-          <%= f.check_box :is_gluten_free, checked: true do %>
-            Is gluten free?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_peanut, required: true do %>
-          <%= f.check_box :contains_peanut, checked: true do %>
-            Contains, or may contain, peanuts?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_treenut, required: true do %>
-          <%= f.check_box :contains_treenut, checked: true do %>
-            Contains, or may contain, treenuts?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_dairy, required: true do %>
-          <%= f.check_box :contains_dairy, checked: true do %>
-            Contains, or may contain, dairy?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_soy, required: true do %>
-          <%= f.check_box :contains_soy, checked: true do %>
-            Contains, or may contain, soy?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_egg, required: true do %>
-          <%= f.check_box :contains_egg, checked: true do %>
-            Contains, or may contain, egg?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_fish, required: true do %>
-          <%= f.check_box :contains_fish, checked: true do %>
-            Contains, or may contain, fish?
-          <% end %>
-        <% end %>
-        <%= f.form_group :contains_shellfish, required: true do %>
-          <%= f.check_box :contains_shellfish, checked: true do %>
-            Contains, or may contain, shellfish?
-          <% end %>
-        <% end %>
-
-        <%= f.submit "Upload your Donation", class: "form-control"%>
-
-      <% end %>
-
-    </div>
-  </div>
 </div>

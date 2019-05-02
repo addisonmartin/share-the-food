@@ -34,10 +34,26 @@ class DonationsController < ApplicationController
 
   end
 
+  def edit
+  end
+
+  def update
+    if @donation.update(donation_params)
+      redirect_to @donation
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @donation.destroy
+    redirect_to root_path
+  end
+
   private
 
   def donation_params
-    params.require(:donation).permit(:name, :description, :fresh_until, :latitude, :longitude, :pickup_notes, :is_perishable, :requires_preparation, :is_vegetarian, :is_vegan, :is_gluten_free, :contains_peanut, :contains_treenut, :contains_dairy, :contains_soy, :contains_egg, :contains_fish, :contains_shellfish).merge(user_id: current_user.id)
+    params.require(:donation).permit(:name, :description, :fresh_until, :latitude, :longitude, :pickup_notes, :is_perishable, :requires_preparation, :is_vegetarian, :is_vegan, :is_gluten_free, :contains_peanut, :contains_treenut, :contains_dairy, :contains_soy, :contains_egg, :contains_fish, :contains_shellfish, images: []).merge(user_id: current_user.id)
   end
 
 end

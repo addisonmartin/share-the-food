@@ -51,6 +51,8 @@ class Donation < ApplicationRecord
   validates_inclusion_of :contains_fish, in: [true, false]
   validates_inclusion_of :contains_shellfish, in: [true, false]
 
+  has_many_attached :images
+
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
   scope :search, -> (search) do

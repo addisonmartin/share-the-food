@@ -121,8 +121,10 @@ This project is deployed on a Heroku dyno. Deployment happens after each push to
 
 ## Built Using
 
-* [Ruby](https://www.ruby-lang.org/en/) - The Language
+* [Ruby](https://www.ruby-lang.org/en/) - The Core Language
 * [Ruby on Rails](https://rubyonrails.org/) - The Web Framework
+* [PostgreSQL](https://www.postgresql.org/) - The SQL Database
+* [Cloudinary](https://cloudinary.com) - Storage for images
 * [Github](https://github.com/) - Used for version control, and project organization and coordination.
 * [Travis CI](https://travis-ci.org/) - Used for continuous integration.
 * [Heroku](https://www.heroku.com/) - Used to host the production server.

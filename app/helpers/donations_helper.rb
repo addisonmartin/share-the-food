@@ -1,7 +1,7 @@
-module DonationsHelper
+# frozen_string_literal: true
 
+module DonationsHelper
   def no_donations_partial_path
     @donations.empty? ? 'donations/no_donations' : 'shared/empty_partial'
   end
-
 end

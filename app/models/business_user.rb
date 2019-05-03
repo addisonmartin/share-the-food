@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: business_users
@@ -24,5 +26,4 @@ class BusinessUser < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :email
   validates_presence_of :encrypted_password
-
 end

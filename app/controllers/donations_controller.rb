@@ -1,5 +1,8 @@
-class DonationsController < ApplicationController
+# frozen_string_literal: true
 
+# Used to connect the (model) PostgreSQL Database,
+# with the (view) HTML/CSS/JS front end.
+class DonationsController < ApplicationController
   # Ensures users who are not signed in CANNOT make a new donation.
   before_action :redirect_if_not_signed_in, only: [:new]
 
@@ -8,15 +11,15 @@ class DonationsController < ApplicationController
   end
 
   def index
-
     search = params[:search]
 
-    if search.blank?
-      @donations = Donation.paginate(page: params[:page], per_page: 20)
-    else
-      @donations = Donation.search(search).paginate(page: params[:page], per_page: 20)
-    end
-
+    @donations = if search.blank?
+                   Donation.paginate(page: params[:page], per_page: 20)
+                 else
+                   Donation.search(search).paginate(
+                     page: params[:page], per_page: 20
+                   )
+                 end
   end
 
   def new
@@ -31,11 +34,9 @@ class DonationsController < ApplicationController
     else
       redirect_to root_path
     end
-
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @donation.update(donation_params)
@@ -53,7 +54,12 @@ class DonationsController < ApplicationController
   private
 
   def donation_params
-    params.require(:donation).permit(:name, :description, :fresh_until, :latitude, :longitude, :pickup_notes, :is_perishable, :requires_preparation, :is_vegetarian, :is_vegan, :is_gluten_free, :contains_peanut, :contains_treenut, :contains_dairy, :contains_soy, :contains_egg, :contains_fish, :contains_shellfish, images: []).merge(user_id: current_user.id)
+    params.require(:donation).permit(
+      :name, :description, :fresh_until, :latitude, :longitude, :pickup_notes,
+      :is_perishable, :requires_preparation, :is_vegetarian, :is_vegan,
+      :is_gluten_free, :contains_peanut, :contains_treenut, :contains_dairy,
+      :contains_soy, :contains_egg, :contains_fish, :contains_shellfish,
+      images: []
+    ).merge(user_id: current_user.id)
   end
-
 end

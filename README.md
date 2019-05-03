@@ -1,7 +1,7 @@
 # Share the Food
 
-### Master Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=master)](https://travis-ci.org/addisonmartin/share-the-food) Development Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=development)](https://travis-ci.org/addisonmartin/share-the-food/branches)
-### Master Sonar Status: [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=addisonmartin_share-the-food&metric=alert_status)](https://sonarcloud.io/dashboard?id=addisonmartin_share-the-food)
+Master Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=master)](https://travis-ci.org/addisonmartin/share-the-food) Development Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=development)](https://travis-ci.org/addisonmartin/share-the-food/branches)
+Master Sonar Status: [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=addisonmartin_share-the-food&metric=alert_status)](https://sonarcloud.io/dashboard?id=addisonmartin_share-the-food)
 
 Share the Food is a web app that aims to connect those who want food, with those who don't want to waste food. Anyone with extra food can create an account and upload a donation. Anyone who wants food, without needing an account, can view all the donations nearby.
 

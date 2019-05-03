@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: donations
@@ -27,7 +29,6 @@
 #
 
 class Donation < ApplicationRecord
-
   belongs_to :user
 
   validates_presence_of :name
@@ -55,8 +56,7 @@ class Donation < ApplicationRecord
 
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
-  scope :search, -> (search) do
-    where("name ILIKE lower(?) OR description ILIKE lower(?)", "%#{search}%", "%#{search}%")
-  end
-
+  scope :search, lambda { |search|
+    where('name ILIKE lower(?) OR description ILIKE lower(?)', "%#{search}%", "%#{search}%")
+  }
 end

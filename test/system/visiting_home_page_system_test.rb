@@ -42,10 +42,8 @@ class VisitingHomePageTest < ApplicationSystemTestCase
   test "navigation bar, and not signed in, should have links to sign in and up" do
     visit root_path
 
-    assert_selector "li", text: "Login"
-    assert_selector "li", text: "Business Login"
-    assert_selector "li", text: "Signup"
-    assert_selector "li", text: "Business Signup"
+    assert_selector "li", text: "Sign In"
+    assert_selector "li", text: "Sign Up"
   end
 
   test "navigation bar, and signed in, should have a hamburger menu with account options" do

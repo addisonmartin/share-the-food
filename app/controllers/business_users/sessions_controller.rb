@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Used to connect the (model) BusinessUsers with their views and actions.
 class BusinessUsers::SessionsController < Devise::SessionsController
   include Accessible
 

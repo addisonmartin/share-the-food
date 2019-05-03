@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Used to control BusinessUsers signing in and up.
 class BusinessUsers::RegistrationsController < Devise::RegistrationsController
   include Accessible
 
@@ -9,10 +10,14 @@ class BusinessUsers::RegistrationsController < Devise::RegistrationsController
   private
 
   def sign_up_params
-    params.require(:business_user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:business_user).permit(
+      :name, :email, :password, :password_confirmation
+    )
   end
 
   def account_update_params
-    params.require(:business_user).permit(:name, :email, :password, :password_confirmation, :current_password)
+    params.require(:business_user).permit(
+      :name, :email, :password, :password_confirmation, :current_password
+    )
   end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# Used by devise to prevent users and business_users from being able to interact on each others session pages
+# Used by devise to prevent users and business_users
+# from being able to interact on each others session pages.
 module Accessible
   extend ActiveSupport::Concern
 

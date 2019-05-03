@@ -15,6 +15,8 @@
 #  updated_at             :datetime         not null
 #
 
+# A user who might be able to receive donations,
+# or want to advertise other services.
 class BusinessUser < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

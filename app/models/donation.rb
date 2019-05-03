@@ -28,6 +28,7 @@
 #  updated_at           :datetime         not null
 #
 
+# The main, central model of the applicaiton. A food donation!
 class Donation < ApplicationRecord
   belongs_to :user
 
@@ -57,6 +58,8 @@ class Donation < ApplicationRecord
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
   scope :search, lambda { |search|
-    where('name ILIKE lower(?) OR description ILIKE lower(?)', "%#{search}%", "%#{search}%")
+    where('name ILIKE lower(?) OR description ILIKE lower(?)',
+          "%#{search}%",
+          "%#{search}%")
   }
 end

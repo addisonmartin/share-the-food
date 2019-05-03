@@ -15,6 +15,7 @@
 #  updated_at             :datetime         not null
 #
 
+# A user account is required to add a new donation.
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

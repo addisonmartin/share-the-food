@@ -30,6 +30,7 @@
 
 require 'test_helper'
 
+# rubocop:disable Metrics/ClassLength
 class DonationTest < ActiveSupport::TestCase
   test 'should not save donation without a user' do
     donation = Donation.new
@@ -104,7 +105,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.longitude = 0
     donation.pickup_notes = 'Pickup notes'
 
-    assert_not donation.save, 'Saved the donation without a is perishable value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a is perishable value.'
   end
 
   test 'should not save donation without a requires preparation value' do
@@ -118,7 +120,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.pickup_notes = 'Pickup notes'
     donation.is_perishable = true
 
-    assert_not donation.save, 'Saved the donation without a requires preparation value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a requires preparation value.'
   end
 
   test 'should not save donation without a is vegetarian value' do
@@ -133,7 +136,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.is_perishable = true
     donation.requires_preparation = true
 
-    assert_not donation.save, 'Saved the donation without a is vegetarian value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a is vegetarian value.'
   end
 
   test 'should not save donation without a is vegan value' do
@@ -166,7 +170,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.is_vegetarian = true
     donation.is_vegan = true
 
-    assert_not donation.save, 'Saved the donation without a is gluten free value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a is gluten free value.'
   end
 
   test 'should not save donation without a contains peanut value' do
@@ -184,7 +189,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.is_vegan = true
     donation.is_gluten_free = true
 
-    assert_not donation.save, 'Saved the donation without a contains peanut value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a contains peanut value.'
   end
 
   test 'should not save donation without a contains treenut value' do
@@ -203,7 +209,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.is_gluten_free = true
     donation.contains_peanut = true
 
-    assert_not donation.save, 'Saved the donation without a contains treenut value.'
+    assert_not donation.save, 'Saved the donation without a'\
+      'contains treenut value.'
   end
 
   test 'should not save donation without a contains dairy value.' do
@@ -223,7 +230,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.contains_peanut = true
     donation.contains_treenut = true
 
-    assert_not donation.save, 'Saved the donation without a contains dairy value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a contains dairy value.'
   end
 
   test 'should not save donation without a contains soy value' do
@@ -289,7 +297,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.contains_soy = true
     donation.contains_egg = true
 
-    assert_not donation.save, 'Saved the donation without a contains fish value.'
+    assert_not donation.save, 'Saved the donation without a'\
+      'contains fish value.'
   end
 
   test 'should not save donation without a contains shellfish value' do
@@ -313,7 +322,8 @@ class DonationTest < ActiveSupport::TestCase
     donation.contains_egg = true
     donation.contains_fish = true
 
-    assert_not donation.save, 'Saved the donation without a contains shellfish value.'
+    assert_not donation.save, 'Saved the donation without'\
+      'a contains shellfish value.'
   end
 
   test 'should save a fully valid donation' do
@@ -342,3 +352,4 @@ class DonationTest < ActiveSupport::TestCase
     assert donation.save, 'Did not save a valid donation.'
   end
 end
+# rubocop:enable Metrics/ClassLength

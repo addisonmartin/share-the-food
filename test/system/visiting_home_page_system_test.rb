@@ -10,7 +10,9 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'button', text: 'I have extra food'
   end
 
-  test 'clicking I want some food button should take you to view donations page' do
+  test 'clicking I want some food button should\
+   take you to view donations page' do
+
     visit root_path
     click_button 'I want some food'
 
@@ -18,14 +20,16 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Nearby Donations List'
   end
 
-  test 'clicking I have extra food, and not signed in, should take you to a why signup page' do
+  test 'clicking I have extra food, and not signed in,'\
+    'should take you to a why signup page' do
     visit root_path
     click_button 'I have extra food'
 
     assert_selector 'h2', text: 'An account is required to add a donation.'
   end
 
-  test 'clicking I have extra food, and signed in, should take you to the new donation page' do
+  test 'clicking I have extra food, and signed in,'\
+    'should take you to the new donation page' do
     visit root_path
     sign_in users(:default_user)
     visit root_path
@@ -40,14 +44,16 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'a', text: 'Share the Food'
   end
 
-  test 'navigation bar, and not signed in, should have links to sign in and up' do
+  test 'navigation bar, and not signed in,'\
+    'should have links to sign in and up' do
     visit root_path
 
     assert_selector 'li', text: 'Sign In'
     assert_selector 'li', text: 'Sign Up'
   end
 
-  test 'navigation bar, and signed in, should have a hamburger menu with account options' do
+  test 'navigation bar, and signed in, should have'\
+    'a hamburger menu with account options' do
     visit root_path
     sign_in users(:default_user)
     visit root_path

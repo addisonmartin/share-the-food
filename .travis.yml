@@ -7,11 +7,10 @@ addons:
       - google-chrome-stable
   sonarcloud:
     organization: "addisonmartin-github"
-    token:
-      secure: "p8LjC2B586Nw2IUSGOkJSbaSCA8S4B8kzSoWR7NLeB+JqHX1si2tySI6cY5xhrhmiuiozUVcgjXlqhnkI/bLJqUN/F/qDA/N3NmovjSK/4JySD98okM3vABtaMJETtggAwQicTJwWpVw4M1dQ6iq0zLxOLOjHsc8HoL7byn5iR4VWVuTwmkEZVT2+3CE1lrSm6vOMnzGez35HxxgVhdXjcWGYprP9aYOsS5mpdd3eUatyyENdhjD2BFScXxH2ksvgpxXrZ656IF4HXalJtAT5ISXqTWcSJM9pkTwtooK8qX69kcXaV1lhnOLcoHzW635yXGVkRnTvAyGOzUh5D8xeRoaNftpN5I1Z/8sRocqFPGSMtH5KgfMqap5Vx7Brt3NIOtMLBTAepnqR76FZZ4iQcepjI4qcN3P5G8Kroft/yWE/6pWyiNFPc/n60CvoJ7579o+75AZjNl4FP9tLu+KAYJ65rZz2RUB4Wzp35ReYfeZbqfhzwmbPt/+zBT6aHkyDV15UQ7PwEdJrONElsWmX0d5xxuaIx27DNBVfkrJUxv7tURlvhBCF3ZbmD2ud7yBTRyhjJF7tRON5Jr3enycAO9cvBOlEwdk8/H3Ohnn7qi58VHBe6dYibuo5sC2t5IGfohmSb4VVt+vBgyvUPf5eMCvvwqY+Hxh52/0+aG+t8o="
+    token: ${SONAR_TOKEN}
 script:
 - bundle install
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - sonar-scanner
-- bundle exec rails test && bundle exec rails test:system
+- bundle exec rubocop && bundle exec rails test && bundle exec rails test:system

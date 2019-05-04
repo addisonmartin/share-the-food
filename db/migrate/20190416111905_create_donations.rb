@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+# Loads the donation schema into the PostgreSQL database server.
 class CreateDonations < ActiveRecord::Migration[5.2]
+  # rubocop:disable Metrics/AbcSize
   def change
     create_table :donations do |t|
       t.belongs_to :user, index: true, required: true
@@ -29,4 +31,5 @@ class CreateDonations < ActiveRecord::Migration[5.2]
       t.timestamps
     end
   end
+  # rubocop:enable Metrics/AbcSize
 end

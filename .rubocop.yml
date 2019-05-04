@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
-    - 'bin/*'
+    - bin/*
     - vendor/bundle/**/*
+    - db/schema.rb
 Metrics/MethodLength:
   Max: 80

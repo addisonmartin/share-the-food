@@ -7,7 +7,7 @@ addons:
       - google-chrome-stable
   sonarcloud:
     organization: "addisonmartin-github"
-    token: "#{ENV['SONAR_TOKEN']}"
+    token: ${SONAR_TOKEN}
 script:
 - bundle install
 - bundle exec rails db:create

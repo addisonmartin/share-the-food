@@ -1,3 +1,5 @@
 AllCops:
   Exclude:
-    - 'bin/'
+    - 'bin/*'
+Metrics/MethodLength:
+  Max: 80

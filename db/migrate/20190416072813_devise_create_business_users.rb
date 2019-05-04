@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Loads the business user schema into the PostgreSQL database server.
 class DeviseCreateBusinessUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :business_users do |t|
@@ -29,7 +30,8 @@ class DeviseCreateBusinessUsers < ActiveRecord::Migration[5.2]
       # t.string   :unconfirmed_email # Only if using reconfirmable
 
       ## Lockable
-      # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
+      # t.integer  :failed_attempts, default: 0, null: false
+      # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 

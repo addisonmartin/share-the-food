@@ -17,14 +17,16 @@ class VisitingViewDonationsPageTest < ApplicationSystemTestCase
     assert_selector 'div', id: 'donations-list'
   end
 
-  test 'view donations page should have a search bar to search all the donations' do
+  test 'view donations page should have a'\
+    'search bar to search all the donations' do
     visit root_path
     click_button 'I want some food'
 
     assert_selector 'i', class: 'fa-search'
   end
 
-  test "view donations page donation's list should display info about the donation, and a way to view the individual donation" do
+  test 'view donations page donation\'s list should display info'\
+    'about the donation, and a way to view the individual donation' do
     visit root_path
     click_button 'I want some food'
 

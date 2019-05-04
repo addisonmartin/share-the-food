@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
     - 'bin/*'
-    - 'vendor/*'
+    - vendor/bundle/**/*
 Metrics/MethodLength:
   Max: 80

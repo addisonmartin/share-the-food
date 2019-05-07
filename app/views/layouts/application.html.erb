@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139559800-1"></script>
@@ -11,6 +11,9 @@
     gtag('config', 'UA-139559800-1');
   </script>
 
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>ShareTheFood</title>
   <%= csrf_meta_tags %>
@@ -20,6 +23,7 @@
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS_API_KEY']}" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+
 </head>
 
 <body>

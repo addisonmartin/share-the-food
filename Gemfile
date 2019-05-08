@@ -71,6 +71,9 @@ gem 'mini_magick', '~> 4.9.0'
 # A static code analyzer for Ruby.
 gem 'rubocop', '~> 0.68.0'
 
+# Used for search engine optimization.
+gem 'meta-tags', '~> 2.11.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console

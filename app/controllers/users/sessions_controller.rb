@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Users
+module Users
   # Used to connect the (model) Users with their views and actions.
   class SessionsController < Devise::SessionsController
     include Accessible

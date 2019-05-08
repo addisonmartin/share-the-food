@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Users
+module Users
   # Used to control Users signing in and up.
   class RegistrationsController < Devise::RegistrationsController
     include Accessible

@@ -1,22 +1,60 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import "variables";
+@import "green_theme";
 
 @import "responsive";
-@import "layouts/*";
-@import "layouts/donations/*"
+@import "search_bar";
+
+.jumbotron
+{
+  width: 100%;
+}
+
+.field-container
+{
+  padding: 10px;
+}
+
+input, select, textarea
+{
+  width: 100%;
+}
+
+#map
+{
+  width: 900px;
+  height: 650px;
+}
+
+#map1
+{
+  width: 900px;
+  height: 650px;
+}
+
+#map2
+{
+  width: 600px;
+  height: 650px;
+}
+
+#map3
+{
+  width: 900px;
+  height: 650px;
+}

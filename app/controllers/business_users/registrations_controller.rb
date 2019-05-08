@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class BusinessUsers
+module BusinessUsers
   # Used to control BusinessUsers signing in and up.
   class RegistrationsController < Devise::RegistrationsController
     include Accessible

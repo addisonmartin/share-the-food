@@ -1,6 +1,8 @@
 <div class="container-fluid">
   <div class="col-lg-6 col-lg-offset-3" align="center">
-    <h2>Sign up</h2>
+    <h1><%= title 'Sign Up' %></h1>
+    <% description 'Enter your information and create a new business account!' %>
+    <% keywords 'Share the Food, Signup, Create a Business Account, New Business Account, New Business User, Business Account, Business User, Business' %>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>

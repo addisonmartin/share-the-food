@@ -15,123 +15,46 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import "variables";
+@import "green_theme";
 
 @import "responsive";
-@import "layouts/*";
+@import "search_bar";
 
-.single-donation-card
+.jumbotron
 {
-  box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
-  color: black;
+  width: 100%;
+}
+
+.field-container
+{
   padding: 10px;
-  text-align: left;
-  transition: border 0.1s, background 0.5s;
-
-  a, a:active, a:hover
-  {
-    color: black;
-  }
-
-  &:hover
-  {
-    cursor: pointer;
-    background: white;
-    box-shadow: none;
-    border-radius: 1%;
-  }
 }
 
-.modal-content
+input, select, textarea
 {
-  h3
-  {
-    text-align: center;
-  }
-  p
-  {
-    margin: 50px 0;
-  }
-  .donated-by
-  {
-    color: rgba(0,0,0, 0.5);
-  }
-}
-
-.modal-content
-{
-  .loaded-data
-  {
-    padding: 0 10px;
-    .donated-by
-    {
-      margin: 0px;
-    }
-  }
-}
-
-.viewing
-{
-  text-align: center;
-  a
-  {
-    background-color: $navbarColor;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    &:hover
-    {
-      background-color: black;
-      color: white;
-    }
-  }
-}
-
-#single-donation-content
-{
-  background: white;
-  height: calc(100vh - 50px);
-  overflow: scroll;
-
-  h3
-  {
-    text-align: center;
-  }
-  p
-  {
-    margin: 50px 0px;
-  }
-  .donated-by
-  {
-    font-size: 12px;
-    font-size: 1.2rem;
-    margin: 20px 0;
-    color: rgba(0,0,0, 0.5);
-  }
+  width: 100%;
 }
 
 #map
 {
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 650px;
 }
-
 
 #map1
 {
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 650px;
 }
-
 
 #map2
 {
   width: 600px;
-  height: 400px;
+  height: 650px;
 }
 
 #map3
 {
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 650px;
 }

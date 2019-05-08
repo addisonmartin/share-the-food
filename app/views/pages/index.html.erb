@@ -1,15 +1,24 @@
-<div class="container-fluid col-lg-6 col-lg-offset-3">
-
-  <div class="jumbotron">
-    <button>
-      <%= link_to 'I want some food', 'donations' %>
-    </button>
-  </div>
-
-  <div class="jumbotron">
-    <button>
-      <%= link_to 'I have extra food', food_partial_path? %>
-    </button>
-  </div>
-
-</div>
+<div class="container-fluid">
+  <div class="col">
+    <div class="row">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+          <h1 class="display-4">Want some food?</h1>
+          <p class="lead">Anyone, no account required, can view food donations nearby!</p>
+          <hr class="my-4">
+          <p>Click below to view all the donations nearby.</p>
+          <a class="btn btn-primary btn-lg" href="donations" role="button">Find Donations</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+          <h1 class="display-4">Have some extra food?</h1>
+          <p class="lead">Create an account to donate your food!</p>
+          <hr class="my-4">
+          <p>Click below to add a new donation.</p>
+          <a class="btn btn-primary btn-lg" href=<%= food_partial_path? %> role="button">Add Donation</a>
+        </div>
+      </div>
+    </div>

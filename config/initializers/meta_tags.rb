@@ -24,7 +24,7 @@ MetaTags.configure do |config|
   # appear on the page as is. Default is true.
   # config.keywords_lowercase = true
 
-  # When true, the output will not include new line characters between meta tags.
+  # When true, the output will not include new line characters between meta tags
   # Default is false.
   # config.minify_output = false
 

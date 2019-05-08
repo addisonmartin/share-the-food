@@ -20,6 +20,11 @@
 @import "responsive";
 @import "layouts/*";
 
+.jumbotron
+{
+  width: 100%;
+}
+
 .single-donation-card
 {
   box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);

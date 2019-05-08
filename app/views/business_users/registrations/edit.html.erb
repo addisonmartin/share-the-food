@@ -1,7 +1,6 @@
 <div class="container-fluid">
-  <div class="col-lg-6 col-lg-offset-3" align="center>
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+  <div class="col-lg-6 col-lg-offset-3" align="center">
+    <h1><%= title "Edit #{resource_name.to_s.humanize}" %></h1>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 

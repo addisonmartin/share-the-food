@@ -1,4 +1,4 @@
-/*
+rail/*
 * This is a manifest file that'll be compiled into application.css, which will include all the files
 * listed below.
 *
@@ -12,9 +12,10 @@
 *
 */
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "green_theme";
 
 @import "responsive";
 @import "search_bar";
@@ -57,5 +58,3 @@ input, select, textarea
   width: 900px;
   height: 650px;
 }
-
-@import "custom_theme";

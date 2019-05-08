@@ -7,6 +7,9 @@
 <div class="container-fluid" id="single-donation-content">
   <div class="col-lg-6 col-lg-offset-3" align="center"">
     <h1><%= title 'Show Donation Details' %></h1>
+    <% description 'View the details of this donation. Such as allergy info and location of donation.' %>
+    <% keywords 'Share the Food, View Donation, Find Donation, Show Donation, Donation Details, View, Find, Show, Details, Donation' %>
+
     <div class="donated-by">Donated by <%= @donation.user.name %> </div>
     <h3> <%= @donation.name %> </h3>
     <p> Description: <%= @donation.description %> </p>

@@ -1,6 +1,8 @@
 <div class="container-fluid">
   <div class="col-lg-6 col-lg-offset-3" align="center">
     <h1><%= title 'Change Your Password' %></h1>
+    <% description 'Change your current password.' %>
+    <% keywords 'Share the Food, Change Password, Update Password, Edit Password, Change, Update, Edit, Password, Business Account Settings' %>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>

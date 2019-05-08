@@ -1,6 +1,9 @@
 <div class="container-fluid">
   <div class="col-lg-6 col-lg-offset-3" align="center">
     <h1><%= title "Edit #{resource_name.to_s.humanize}" %></h1>
+    <% description 'Edit your business account settings.' %>
+    <% keywords 'Share the Food, Edit Business Account Settings, Edit Business Account Profile, Edit Business User Settings, Edit Business User Profile, Business Account Settings, Business Account Profile, Business User Settings, Business User Profile, Business Account, Edit, Business User, Settings, Profile, Business' %>
+
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 

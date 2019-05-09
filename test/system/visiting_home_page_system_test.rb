@@ -22,8 +22,9 @@ class VisitingHomePageTest < ApplicationSystemTestCase
   test 'home page should have a footer' do
     visit root_path
 
-    assert_selector 'footer', text: 'Share the Food | Questions? ;
-    Contact us at: contact@sharethefood.net'
+    assert_selector 'footer',
+                    text: 'Share the Food | Questions? Contact us at: '\
+                    'contact@sharethefood.net'
   end
 
   test 'home page, and not signed in, should have navigation bar ;
@@ -36,8 +37,8 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'a', text: 'Log In'
   end
 
-  test 'home page, and signed in, should have navigation bar links ;
-  to edit account and lag out.' do
+  test 'home page, and signed in, should have navigation bar links'\
+  'to edit account and lag out.' do
     visit root_path
 
     sign_in users(:default_user)

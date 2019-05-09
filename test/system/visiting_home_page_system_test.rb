@@ -3,7 +3,6 @@
 require 'application_system_test_case'
 
 class VisitingHomePageTest < ApplicationSystemTestCase
-
   test 'home page should have buttons to view and add donations' do
     visit root_path
 
@@ -23,10 +22,12 @@ class VisitingHomePageTest < ApplicationSystemTestCase
   test 'home page should have a footer' do
     visit root_path
 
-    assert_selector 'footer', text: 'Share the Food | Questions? Contact us at: contact@sharethefood.net'
+    assert_selector 'footer', text: 'Share the Food | Questions? ;
+    Contact us at: contact@sharethefood.net'
   end
 
-  test 'home page, and not signed in, should have navigation bar links to sign up and in' do
+  test 'home page, and not signed in, should have navigation bar ;
+  links to sign up and in' do
     visit root_path
 
     click_link 'Account Settings'
@@ -35,7 +36,8 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'a', text: 'Log In'
   end
 
-  test 'home page, and signed in, should have navigation bar links to edit account and lag out.' do
+  test 'home page, and signed in, should have navigation bar links ;
+  to edit account and lag out.' do
     visit root_path
 
     sign_in users(:default_user)
@@ -45,5 +47,4 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'a', text: 'Edit Account'
     assert_selector 'a', text: 'Sign Out'
   end
-
 end

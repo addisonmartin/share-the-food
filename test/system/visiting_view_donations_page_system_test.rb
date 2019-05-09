@@ -3,7 +3,6 @@
 require 'application_system_test_case'
 
 class VisitingViewDonationsPageTest < ApplicationSystemTestCase
-
   test 'viewing donations from home page' do
     visit root_path
     click_link 'Find Donations'
@@ -24,5 +23,4 @@ class VisitingViewDonationsPageTest < ApplicationSystemTestCase
 
     assert_selector 'div', id: 'donations-list'
   end
-
 end

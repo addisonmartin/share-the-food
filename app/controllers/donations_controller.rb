@@ -30,8 +30,10 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
 
     if @donation.save
+      flash[:success] = 'Donation was uploaded! Thank you'
       redirect_to donation_path(@donation)
     else
+      flash[:error] = 'Sorry, there was an error uploading your donation.'
       redirect_to root_path
     end
   end
@@ -40,14 +42,17 @@ class DonationsController < ApplicationController
 
   def update
     if @donation.update(donation_params)
+      flash[:success] = 'Your donation was updated.'
       redirect_to @donation
     else
+      flash[:error] = 'Sorry, something went wrong.'
       render 'edit'
     end
   end
 
   def destroy
     @donation.destroy
+    flash[:success] = 'Your donation was removed!'
     redirect_to root_path
   end
 

@@ -26,13 +26,24 @@ class VisitingHomePageTest < ApplicationSystemTestCase
     assert_selector 'footer', text: 'Share the Food | Questions? Contact us at: contact@sharethefood.net'
   end
 
-  test 'home page and not signed in, should have navigation bar links to sign up and in' do
+  test 'home page, and not signed in, should have navigation bar links to sign up and in' do
     visit root_path
 
     click_link 'Account Settings'
 
     assert_selector 'a', text: 'Sign Up'
     assert_selector 'a', text: 'Log In'
+  end
+
+  test 'home page, and signed in, should have navigation bar links to edit account and lag out.' do
+    visit root_path
+
+    sign_in users(:default_user)
+    visit root_path
+    click_link 'Account Settings'
+
+    assert_selector 'a', text: 'Edit Account'
+    assert_selector 'a', text: 'Sign Out'
   end
 
 end

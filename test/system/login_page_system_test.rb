@@ -2,5 +2,5 @@
 
 require 'application_system_test_case'
 
-class VistingWhySignupPageTest < ApplicationSystemTestCase
+class LoginPageTest < ApplicationSystemTestCase
 end

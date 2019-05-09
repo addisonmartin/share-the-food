@@ -31,6 +31,10 @@
 
 <body>
   <%= render 'layouts/navigation' %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
   <%= yield %>
+  <%= render 'layouts/footer' %>
 </body>
 </html>

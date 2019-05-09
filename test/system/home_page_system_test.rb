@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class VisitingHomePageTest < ApplicationSystemTestCase
+class HomePageTest < ApplicationSystemTestCase
   test 'home page should have buttons to view and add donations' do
     visit root_path
 

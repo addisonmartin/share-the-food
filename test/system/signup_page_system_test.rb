@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class VistingSignupPageTest < ApplicationSystemTestCase
+class SignupPageTest < ApplicationSystemTestCase
   test 'signup page should ask for name, email, and password' do
     visit root_path
     click_link 'Account Settings'

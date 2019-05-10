@@ -4,6 +4,6 @@
 # Used to control the (view) why signup page.
 class PagesController < ApplicationController
   def show
-    render file: 'pages/why_signup'
+    render "pages/#{params[:page]}"
   end
 end

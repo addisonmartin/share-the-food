@@ -8,7 +8,7 @@
   <p> <div id="map2"></div></p>
   <%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 
-  <h4> Allergn and Other Info: </h4>
+  <h4> Allergen and Other Info: </h4>
   <%= f.form_group :is_perishable, required: true do %>
     <%= f.check_box :is_perishable, checked: false do %>
       Is Perishable?

@@ -38,7 +38,9 @@ class DonationsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @donation = Donation.find(params[:id])
+  end
 
   def update
     if @donation.update(donation_params)

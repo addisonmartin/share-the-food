@@ -38,7 +38,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Name', with: 'Donation Name'
     click_button 'Create Donation'
 
-    message = page.find('#donation_description').native.attribute('validationMessage')
+    message = page.find('#donation_description')\
+                  .native.attribute('validationMessage')
     assert_equal message, 'Please fill out this field.'
   end
 
@@ -65,7 +66,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'fresh-until', with: DateTime.current.strftime("%m%d%Y\t%I%M%P")
     click_button 'Create Donation'
 
-    message = page.find('#donation_latitude').native.attribute('validationMessage')
+    message = page.find('#donation_latitude')\
+                  .native.attribute('validationMessage')
     assert_equal message, 'Please fill out this field.'
   end
 
@@ -80,7 +82,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Latitude', with: '-1'
     click_button 'Create Donation'
 
-    message = page.find('#donation_longitude').native.attribute('validationMessage')
+    message = page.find('#donation_longitude')\
+                  .native.attribute('validationMessage')
     assert_equal message, 'Please fill out this field.'
   end
 
@@ -96,7 +99,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Longitude', with: '1'
     click_button 'Create Donation'
 
-    message = page.find('#donation_pickup_notes').native.attribute('validationMessage')
+    message = page.find('#donation_pickup_notes')\
+                  .native.attribute('validationMessage')
     assert_equal message, 'Please fill out this field.'
   end
 

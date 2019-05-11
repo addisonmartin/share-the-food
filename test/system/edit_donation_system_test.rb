@@ -14,6 +14,5 @@ class EditDonationTest < ApplicationSystemTestCase
   end
 
   test 'editing donation' do
-    
   end
 end

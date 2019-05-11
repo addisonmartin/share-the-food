@@ -41,10 +41,10 @@ class DonationsController < ApplicationController
   def edit
     @donation = Donation.find(params[:id])
 
-    unless current_user and current_user.id == @donation.user.id
-      flash[:error] = 'Sorry, only the donation\'s owner can edit their donation.'
-      redirect_to '/donations'
-    end
+    return if current_user && (current_user.id == @donation.user.id)
+
+    flash[:error] = 'Sorry, only the donation\'s owner can edit their donation.'
+    redirect_to '/donations'
   end
 
   def update

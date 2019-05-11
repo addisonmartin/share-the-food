@@ -6,7 +6,7 @@
     </div>
     <p class="mb-1"><%= donation.description%></p>
     <% if donation.user %>
-    <small><%= donation.user.name %></small>
+    <%= link_to 'Delete', donation_path(donation), data: {:confirm => 'Are you sure you want to delete this donation?'}, :method => :delete %>
     <% else %>
     <small>No User Name Available</small>
     <% end %>

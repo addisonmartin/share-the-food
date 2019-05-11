@@ -64,7 +64,7 @@ class DonationsController < ApplicationController
 
     @donation.discard
     flash[:success] = 'Your donation was removed!'
-    redirect_to '/pages/user_donations'
+    redirect_to '/pages/active_donations'
   end
 
   private

@@ -7,7 +7,7 @@ class DeleteDonationTest < ApplicationSystemTestCase
     sign_in users(:default_user)
     visit root_path
     click_link users(:default_user).name
-    click_link 'View my Donations'
+    click_link 'View My Active Donations'
 
     assert_text 'Delete'
   end
@@ -16,7 +16,7 @@ class DeleteDonationTest < ApplicationSystemTestCase
     sign_in users(:default_user)
     visit root_path
     click_link users(:default_user).name
-    click_link 'View my Donations'
+    click_link 'View My Active Donations'
 
     assert_text donations(:donation_for_delete_test).name
 

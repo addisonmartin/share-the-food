@@ -46,7 +46,8 @@ class HomePageTest < ApplicationSystemTestCase
     click_link users(:default_user).name.to_s
 
     assert_selector 'a', text: 'Edit Account'
-    assert_selector 'a', text: 'View my Donations'
+    assert_selector 'a', text: 'View My Active Donations'
+    assert_selector 'a', text: 'View My Donation History'
     assert_selector 'a', text: 'Sign Out'
   end
 end

@@ -1,4 +1,4 @@
-<div class="col-sm-12">
+<div class="col-sm-12" id="search-bar">
   <%= form_tag(send("donations_path"), :method => "get", id: "search-form") do %>
     <i class="fa fa-search" aria-hidden="true"></i>
     <%= text_field_tag :search, params[:search], placeholder: "Search Donations", class: "form-control" %>

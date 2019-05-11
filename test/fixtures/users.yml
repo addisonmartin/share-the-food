@@ -23,3 +23,8 @@ default_user:
   name: Default User
   email: user@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+user_for_edit_test:
+  name: Edit User
+  email: euser@email.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

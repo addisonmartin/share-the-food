@@ -16,7 +16,8 @@ class ViewSingleDonationTest < ApplicationSystemTestCase
     click_link 'Find Donations'
     click_link donations(:default_user_donation).name.to_s
 
-    assert_selector 'h2', text: donations(:default_user_donation).user.name
+    assert_selector 'h2', text: donations(:default_user_donation).user
+                                                                 .display_name
   end
 
   test 'viewing a donation should display its name' do

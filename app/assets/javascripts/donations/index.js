@@ -1,6 +1,5 @@
 function initMapForList(donations) {
 
-  console.log(window.location)
   var coords = new google.maps.LatLng(10.0, 14.0);
 
   var mapOptions = {

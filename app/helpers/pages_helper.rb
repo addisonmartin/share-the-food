@@ -13,4 +13,12 @@ module PagesHelper
       'shared/empty_partial'
     end
   end
+
+  def no_donation_history_partial_path
+    if @donation_history.empty?
+      'donations/no_user_donations'
+    else
+      'shared/empty_partial'
+    end
+  end
 end

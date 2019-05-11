@@ -5,7 +5,8 @@
 class PagesController < ApplicationController
   def show
     # User donations is used by the page user_donations.html.erb
-    @user_donations = current_user ? current_user.donations : []
+    @user_donations = current_user ? current_user.donations.kept : []
+    @donation_history = current_user ? current_user.donations.all : []
     render "pages/#{params[:page]}"
   end
 end

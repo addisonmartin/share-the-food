@@ -1,14 +1,6 @@
 function initMapForList(donations) {
 
-  var lat = 52.5;
-  var lng = 0.125;
-
-  if (donations.length != 0) {
-    lat = donations[0].latitude;
-    lng = donations[0].longitude;
-  }
-
-  var coords = new google.maps.LatLng(lat, lng);
+  var coords = new google.maps.LatLng(10.0, 14.0);
 
   var mapOptions = {
     center: coords,
@@ -22,6 +14,13 @@ function initMapForList(donations) {
     var marker = new google.maps.Marker({
       position: markerCoords,
       map: map
+    });
+  }
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      map.setCenter(initialLocation);
     });
   }
 }

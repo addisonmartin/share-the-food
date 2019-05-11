@@ -3,11 +3,17 @@ function initMapForNew() {
   var lng = document.getElementById('donation_longitude').value;
 
   if (!lat || !lng){
-        lat=51.5;
-        lng=-0.125;
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        lat = position.coords.latitude;
+        lng = position.coords.longitude
+        initialLocation = new google.maps.LatLng(lat, lng);
+        map.setCenter(initialLocation);
         document.getElementById('donation_latitude').value = lat;
         document.getElementById('donation_longitude').value = lng;
+      });
     }
+  }
 
   var coords = new google.maps.LatLng(lat, lng);
 

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="col-lg-6 col-lg-offset-3">
+    <h1><%= title 'My Donation History' %></h1>
+    <% description 'View all past donations.' %>
+    <% keywords 'Share the Food, Account History, User History, Donation History, History, Account, Donations' %>
+
+    <h2>All past and current donations.</h2>
+    <div class="row" id="user-donations-list">
+      <%= render @donation_history %>
+      <%= render no_donation_history_partial_path %>
+    </div>
+  </div>
+</div>

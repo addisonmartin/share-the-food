@@ -30,6 +30,8 @@
 
 # The main, central model of the applicaiton. A food donation!
 class Donation < ApplicationRecord
+  include Discard::Model
+
   belongs_to :user
 
   validates_presence_of :name

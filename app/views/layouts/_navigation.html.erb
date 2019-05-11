@@ -26,7 +26,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if user_signed_in? %>
             <a class="dropdown-item" href="/users/edit">Edit Account</a>
-            <a class="dropdown-item" href="/pages/user_donations">View my Donations</a>
+            <a class="dropdown-item" href="/pages/active_donations">View My Active Donations</a>
+            <a class="dropdown-item" href="/pages/donation_history">View My Donation History</a>
             <a class="dropdown-item" href="/users/sign_out">Sign Out</a>
           <% else %>
             <a class="dropdown-item" href="/users/sign_up">Sign Up</a>

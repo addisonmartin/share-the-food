@@ -14,9 +14,9 @@ class DonationsController < ApplicationController
     search = params[:search]
 
     @donations = if search.blank?
-                   Donation.paginate(page: params[:page], per_page: 9)
+                   Donation.kept.paginate(page: params[:page], per_page: 9)
                  else
-                   Donation.search(search).paginate(
+                   Donation.kept.search(search).paginate(
                      page: params[:page], per_page: 9
                    )
                  end
@@ -39,7 +39,7 @@ class DonationsController < ApplicationController
   end
 
   def edit
-    @donation = Donation.find(params[:id])
+    @donation = Donation.kept.find(params[:id])
 
     return if current_user && (current_user.id == @donation.user.id)
 
@@ -48,7 +48,7 @@ class DonationsController < ApplicationController
   end
 
   def update
-    @donation = Donation.find(params[:id])
+    @donation = Donation.kept.find(params[:id])
 
     if @donation.update(donation_params)
       flash[:success] = 'Your donation was updated.'
@@ -60,11 +60,11 @@ class DonationsController < ApplicationController
   end
 
   def destroy
-    @donation = Donation.find(params[:id])
+    @donation = Donation.kept.find(params[:id])
 
-    @donation.destroy
+    @donation.discard
     flash[:success] = 'Your donation was removed!'
-    redirect_to '/pages/user_donations'
+    redirect_to '/pages/active_donations'
   end
 
   private

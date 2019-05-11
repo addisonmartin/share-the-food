@@ -36,6 +36,20 @@ class EditAccountTest < ApplicationSystemTestCase
     assert_text 'New Name'
   end
 
+  test 'editing users display name' do
+    sign_in users(:user_for_edit_test)
+    visit root_path
+    click_link users(:user_for_edit_test).name
+    click_link 'Edit Account'
+
+    fill_in 'Name', with: 'New Display Name'
+    fill_in 'Current password', with: 'password'
+
+    click_button 'Update'
+    assert_text 'Your account has been updated successfully.'
+    assert_text 'New Display Name'
+  end
+
   test 'editing users email' do
     sign_in users(:user_for_edit_test)
     visit root_path

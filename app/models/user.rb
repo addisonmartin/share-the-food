@@ -6,6 +6,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  name                   :string           default(""), not null
+#  display_name           :string           default(""), not null
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -25,6 +26,7 @@ class User < ApplicationRecord
   has_many :donations, dependent: :destroy
 
   validates_presence_of :name
+  validates_presence_of :display_name
   validates_presence_of :email
   validates_presence_of :encrypted_password
 end

@@ -9,12 +9,17 @@
 
       <div class="field-container">
         <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true, placeholder: "Will be shown publicly." %>
+        <%= f.text_field :name, autofocus: true, placeholder: "Your full name." %>
+      </div>
+
+      <div class="field-container">
+        <%= f.label :display_name %><br />
+        <%= f.text_field :display_name, autofocus: true, placeholder: "The name that will be shown publicly with your donations." %>
       </div>
 
       <div class="field-container">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Never used publicly." %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Never shown publicly." %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

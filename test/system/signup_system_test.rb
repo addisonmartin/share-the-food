@@ -3,13 +3,14 @@
 require 'application_system_test_case'
 
 class SignupTest < ApplicationSystemTestCase
-  test 'signup page should ask for name, email, and password' do
+  test 'signup page should ask for name, display name, email, and password' do
     visit root_path
     click_link 'Account Settings'
     click_link 'Sign Up'
 
     assert_selector 'h1', text: 'Sign Up'
     assert_selector 'label', text: 'Name'
+    assert_selector 'label', text: 'Display name'
     assert_selector 'label', text: 'Email'
     assert_selector 'label', text: 'Password'
     assert_selector 'label', text: 'Password confirmation'
@@ -22,6 +23,7 @@ class SignupTest < ApplicationSystemTestCase
     click_link 'Sign Up'
 
     fill_in 'Name', with: 'Bob Tester'
+    fill_in 'Display name', with: 'Bob'
     fill_in 'Email', with: 'No at sign haha'
 
     click_button 'Sign up'
@@ -34,6 +36,7 @@ class SignupTest < ApplicationSystemTestCase
     click_link 'Sign Up'
 
     fill_in 'Name', with: 'Bob Tester'
+    fill_in 'Display name', with: 'Bob'
     fill_in 'Email', with: 'bob@totallyrealemail.com'
     fill_in 'Password', with: '12345'
     fill_in 'Password confirmation', with: '12345'
@@ -48,6 +51,7 @@ class SignupTest < ApplicationSystemTestCase
     click_link 'Sign Up'
 
     fill_in 'Name', with: 'Bob Tester'
+    fill_in 'Display name', with: 'Bob'
     fill_in 'Email', with: 'bob@totallyrealemail.com'
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '87654321'
@@ -62,6 +66,7 @@ class SignupTest < ApplicationSystemTestCase
     click_link 'Sign Up'
 
     fill_in 'Name', with: 'Bob Tester'
+    fill_in 'Display name', with: 'Bob'
     fill_in 'Email', with: 'bob@totallyrealemail.com'
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '12345678'
@@ -77,6 +82,7 @@ class SignupTest < ApplicationSystemTestCase
     click_link 'Sign Up'
 
     fill_in 'Name', with: 'Fake Tester'
+    fill_in 'Display name', with: 'Fake'
     fill_in 'Email', with: 'user@email.com' # See /tests/fixtures/users.yml
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '12345678'

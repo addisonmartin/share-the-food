@@ -4,6 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  name                   :string           default(""), not null
+#  display_name           :string           default(""), not null
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -21,10 +22,12 @@
 #
 default_user:
   name: Default User
+  display_name: D. User
   email: user@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 user_for_edit_test:
   name: Edit User
+  display_name: E. User
   email: euser@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

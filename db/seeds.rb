@@ -8,8 +8,10 @@ def seed_users
   names2 = %w[Sue Bobson Do Milston Sanchez]
 
   10.times do
+    name1 = names1[rand(names1.length)]
     User.create(
-      name: "#{names1[rand(names1.length)]} #{names2[rand(names2.length)]}",
+      name: name1 + (names2[rand(names2.length)]).to_s,
+      display_name: name1,
       email: "email#{user_id}@email.com", password: '123456',
       password_confirmation: '123456'
     )

@@ -6,6 +6,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  name                   :string           default(""), not null
+#  display_name           :string           default(""), not null
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -24,9 +25,17 @@ class UserTest < ActiveSupport::TestCase
     assert_not user.save, 'Saved the user without a name.'
   end
 
+  test 'should not save a user without a display name' do
+    user = User.new
+    user.name = 'Name'
+
+    assert_not user.save, 'Saved the user without a display name.'
+  end
+
   test 'should not save a user without an email' do
     user = User.new
     user.name = 'Name'
+    user.display_name = 'N'
 
     assert_not user.save, 'Saved the user without an email.'
   end
@@ -34,6 +43,7 @@ class UserTest < ActiveSupport::TestCase
   test 'should not save a user without a password' do
     user = User.new
     user.name = 'Name'
+    user.display_name = 'N'
     user.email = 'name@email.com'
 
     assert_not user.save, 'Saved the user without a password.'

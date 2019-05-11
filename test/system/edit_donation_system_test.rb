@@ -7,7 +7,7 @@ class EditDonationTest < ApplicationSystemTestCase
     sign_in users(:default_user)
     visit root_path
     click_link users(:default_user).name
-    click_link 'View my Donations'
+    click_link 'View My Active Donations'
     click_link donations(:default_user_donation).name
 
     assert_text 'Edit Donation'

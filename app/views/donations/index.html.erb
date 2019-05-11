@@ -2,13 +2,15 @@
   <h1><%= title 'View Donations' %></h1>
   <% description 'View all nearby donations.' %>
   <% keywords 'Share the Food, View Donations, Find Donations, Nearby Donations, View Food, Find Food, Nearby Food, Want Food, Need Food, View, Find, Nearby' %>
+</div>
+<div class="col-lg-6">
   <div class="row">
-    <div class="col-lg-6">
-      <%= render 'donations/donations_map' %>
-    </div>
+    <%= render 'donations/donations_map' %>
+  </div>
+</div>
 
-    <div class="col-lg-6">
-      <%= render 'donations/donations_list' %>
-    </div>
+<div class="col-lg-6">
+  <div class="row">
+    <%= render 'donations/donations_list' %>
   </div>
 </div>

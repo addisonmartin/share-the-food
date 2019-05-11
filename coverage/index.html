@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-10T22:21:43-07:00">2019-05-10T22:21:43-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-10T22:25:30-07:00">2019-05-10T22:25:30-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.77
+         0.81
        </span>
     </span> hits/line)
   </h2>
@@ -157,7 +157,7 @@
         <td>38</td>
         <td>15</td>
         <td>23</td>
-        <td>0.6</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -247,7 +247,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -267,7 +267,7 @@
         <td>7</td>
         <td>4</td>
         <td>3</td>
-        <td>3.6</td>
+        <td>3.7</td>
       </tr>
       
       <tr>
@@ -317,7 +317,7 @@
         <td>24</td>
         <td>23</td>
         <td>1</td>
-        <td>1.2</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -343,7 +343,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.55
+         0.58
        </span>
     </span> hits/line)
   </h2>
@@ -455,7 +455,7 @@
         <td>38</td>
         <td>15</td>
         <td>23</td>
-        <td>0.6</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -597,7 +597,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.19
        </span>
     </span> hits/line)
   </h2>
@@ -649,7 +649,7 @@
         <td>24</td>
         <td>23</td>
         <td>1</td>
-        <td>1.2</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -721,7 +721,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.13
+         2.22
        </span>
     </span> hits/line)
   </h2>
@@ -763,7 +763,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -783,7 +783,7 @@
         <td>7</td>
         <td>4</td>
         <td>3</td>
-        <td>3.6</td>
+        <td>3.7</td>
       </tr>
       
     </tbody>
@@ -2439,8 +2439,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
           
           <code class="ruby">    search = params[:search]</code>
         </li>
@@ -2451,14 +2451,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="16">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
           
           <code class="ruby">    @donations = if search.blank?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="17">
+          <span class="hits">4</span>
           
           <code class="ruby">                   Donation.paginate(page: params[:page], per_page: 9)</code>
         </li>
@@ -4188,8 +4188,8 @@
           <code class="ruby">  def no_donations_partial_path</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    @donations.empty? ? &#39;donations/no_donations&#39; : &#39;shared/empty_partial&#39;</code>
         </li>
@@ -4304,8 +4304,8 @@
           <code class="ruby">  def food_partial_path?</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="6">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="6">
+          <span class="hits">23</span>
           
           <code class="ruby">    user_signed_in? ? &#39;donations/new&#39; : &#39;pages/why_signup&#39;</code>
         </li>
@@ -5095,8 +5095,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="58">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="58">
+          <span class="hits">8</span>
           
           <code class="ruby">  default_scope -&gt; { includes(:user).order(fresh_until: :asc) }</code>
         </li>

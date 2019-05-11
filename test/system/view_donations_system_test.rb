@@ -23,4 +23,11 @@ class ViewDonationsTest < ApplicationSystemTestCase
 
     assert_selector 'div', id: 'donations-list'
   end
+
+  test 'view donations by searching' do
+    visit root_path
+    click_link 'Find Donations'
+
+    assert_selector 'div', id: 'search-bar'
+  end
 end

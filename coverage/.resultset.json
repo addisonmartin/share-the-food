@@ -192,7 +192,7 @@
         null,
         1,
         1,
-        39,
+        45,
         null,
         null,
         1,
@@ -297,6 +297,43 @@
         null,
         null
       ],
+      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/concerns/accessible.rb": [
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        16,
+        0,
+        0,
+        16,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/registrations_controller.rb": [
         null,
         null,
@@ -324,31 +361,6 @@
         null,
         null
       ],
-      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/concerns/accessible.rb": [
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        10,
-        0,
-        0,
-        10,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
       "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/mailers/application_mailer.rb": [
         null,
         null,
@@ -361,18 +373,6 @@
       "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/jobs/application_job.rb": [
         null,
         null,
-        0,
-        0
-      ],
-      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
-        null,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
         0,
         0
       ],
@@ -713,6 +713,6 @@
         0
       ]
     },
-    "timestamp": 1557556310
+    "timestamp": 1557557948
   }
 }

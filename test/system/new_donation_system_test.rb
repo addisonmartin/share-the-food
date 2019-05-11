@@ -2,6 +2,7 @@
 
 require 'application_system_test_case'
 
+# rubocop:disable Metrics/ClassLength
 class NewDonationTest < ApplicationSystemTestCase
   test 'adding a donation, and not signed in, redirects to why sign up page' do
     visit root_path
@@ -25,7 +26,8 @@ class NewDonationTest < ApplicationSystemTestCase
 
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#donation_name").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation requires a description' do
@@ -36,7 +38,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Name', with: 'Donation Name'
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#donation_description").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation requires a fresh until date' do
@@ -48,7 +51,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Description', with: 'Donation Description'
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#fresh-until").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation requires a latitude' do
@@ -61,7 +65,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'fresh-until', with: DateTime.current.strftime("%m%d%Y\t%I%M%P")
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#donation_latitude").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation requires a longitude' do
@@ -75,7 +80,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Latitude', with: '-1'
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#donation_longitude").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation requires pickup notes' do
@@ -90,7 +96,8 @@ class NewDonationTest < ApplicationSystemTestCase
     fill_in 'Longitude', with: '1'
     click_button 'Create Donation'
 
-    assert_selector 'h1', text: 'Add Donation'
+    message = page.find("#donation_pickup_notes").native.attribute("validationMessage")
+    assert_equal message, "Please fill out this field."
   end
 
   test 'adding a donation' do
@@ -131,3 +138,4 @@ class NewDonationTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Donation Details'
   end
 end
+# rubocop:enable Metrics/ClassLength

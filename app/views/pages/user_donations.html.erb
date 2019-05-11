@@ -4,9 +4,11 @@
     <% description 'View, edit, or delete your past and current donations.' %>
     <% keywords 'Share the Food, Account History, User History, Donation History, History, Donation' %>
 
-    <div class="list-group">
-      <% 
-      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Cras justo odio</a>
+    
+
+    <div class="row" id="donations-list">
+      <%= render @donations %>
+      <%= render no_donations_partial_path %>
     </div>
 
   </div>

@@ -43,9 +43,10 @@ class HomePageTest < ApplicationSystemTestCase
 
     sign_in users(:default_user)
     visit root_path
-    click_link 'Account Settings'
+    click_link users(:default_user).name.to_s
 
     assert_selector 'a', text: 'Edit Account'
+    assert_selector 'a', text: 'View my Donations'
     assert_selector 'a', text: 'Sign Out'
   end
 end

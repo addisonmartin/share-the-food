@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   resources :donations do
   end
 
+  get '/pages/:page' => 'pages#show'
   resources :pages, only: :show
 end

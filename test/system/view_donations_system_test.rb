@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class ViewDonationsPageTest < ApplicationSystemTestCase
+class ViewDonationsTest < ApplicationSystemTestCase
   test 'viewing donations from home page' do
     visit root_path
     click_link 'Find Donations'
@@ -22,5 +22,12 @@ class ViewDonationsPageTest < ApplicationSystemTestCase
     click_link 'Find Donations'
 
     assert_selector 'div', id: 'donations-list'
+  end
+
+  test 'view donations by searching' do
+    visit root_path
+    click_link 'Find Donations'
+
+    assert_selector 'div', id: 'search-bar'
   end
 end

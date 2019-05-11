@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class SignupPageTest < ApplicationSystemTestCase
+class SignupTest < ApplicationSystemTestCase
   test 'signup page should ask for name, email, and password' do
     visit root_path
     click_link 'Account Settings'
@@ -69,5 +69,19 @@ class SignupPageTest < ApplicationSystemTestCase
     click_button 'Sign up'
     assert_text 'Find Donations'
     assert_text 'Add a Donation'
+  end
+
+  test 'cannot create two accounts with same email' do
+    visit root_path
+    click_link 'Account Settings'
+    click_link 'Sign Up'
+
+    fill_in 'Name', with: 'Fake Tester'
+    fill_in 'Email', with: 'user@email.com' # See /tests/fixtures/users.yml
+    fill_in 'Password', with: '12345678'
+    fill_in 'Password confirmation', with: '12345678'
+
+    click_button 'Sign up'
+    assert_text 'Email has already been taken'
   end
 end

@@ -7,6 +7,10 @@ module PagesHelper
   end
 
   def no_user_donations_partial_path
-    @user_donations.empty? ? 'donations/no_user_donations' : 'shared/empty_partial'
+    if @user_donation.empty?
+      'shared/empty_partial'
+    else
+      'donations/no_user_donations'
+    end
   end
 end

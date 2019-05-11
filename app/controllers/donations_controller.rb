@@ -14,10 +14,10 @@ class DonationsController < ApplicationController
     search = params[:search]
 
     @donations = if search.blank?
-                   Donation.paginate(page: params[:page], per_page: 20)
+                   Donation.paginate(page: params[:page], per_page: 9)
                  else
                    Donation.search(search).paginate(
-                     page: params[:page], per_page: 20
+                     page: params[:page], per_page: 9
                    )
                  end
   end
@@ -38,7 +38,9 @@ class DonationsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @donation = Donation.find(params[:id])
+  end
 
   def update
     if @donation.update(donation_params)

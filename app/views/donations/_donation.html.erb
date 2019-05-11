@@ -1,19 +1,27 @@
-<div class="col-sm-3 single-donation-card" id=<%= donation_path(donation.id) %>>
-  <div class="card">
-    <div class="card-block">
-
-      <h4 class="donation-name">
-        <%= truncate(donation.name, :length => 60) %>
-      </h4>
-      <% if donation.user %>
-        <div class="donation-description">
-          <div class="donated-by">Donated by <%= donation.user.name %> </div>
-          <p> <%= donation.description %></p>
-          <button>
-            <%= link_to "View Donation", donation_path(donation.id), class: "viewing" %>
-          </button>
-        </div>
-      <% end %>
+<% if request.original_fullpath == "/pages/user_donations" and current_user and current_user.id == donation.id %>
+  <a href="<%= edit_donation_path(donation.id) %>" class="list-group-item list-group-item-action list-group-item-primary" id=<%= edit_donation_path(donation.id) %>>
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><%= donation.name %></h5>
+      <small><%= donation.fresh_until %></small>
     </div>
-  </div>
-</div>
+    <p class="mb-1"><%= donation.description%></p>
+    <% if donation.user %>
+    <small><%= donation.user.name %></small>
+    <% else %>
+    <small>No User Name Available</small>
+    <% end %>
+  </a>
+<% else %>
+  <a href="<%= donation_path(donation.id) %>" class="list-group-item list-group-item-action list-group-item-primary" id=<%= donation_path(donation.id) %>>
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><%= donation.name %></h5>
+      <small><%= donation.fresh_until %></small>
+    </div>
+    <p class="mb-1"><%= donation.description%></p>
+    <% if donation.user %>
+    <small><%= donation.user.name %></small>
+    <% else %>
+    <small>No User Name Available</small>
+    <% end %>
+  </a>
+<% end %>

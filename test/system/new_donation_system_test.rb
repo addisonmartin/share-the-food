@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class NewDonationPageTest < ApplicationSystemTestCase
+class NewDonationTest < ApplicationSystemTestCase
   test 'adding a donation, and not signed in, redirects to why sign up page' do
     visit root_path
     click_link 'Add a Donation'

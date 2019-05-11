@@ -2,5 +2,5 @@
 
 require 'application_system_test_case'
 
-class EditAccountPageTest < ApplicationSystemTestCase
+class DeleteDonationTest < ApplicationSystemTestCase
 end

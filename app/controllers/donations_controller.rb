@@ -40,9 +40,16 @@ class DonationsController < ApplicationController
 
   def edit
     @donation = Donation.find(params[:id])
+
+    return if current_user && (current_user.id == @donation.user.id)
+
+    flash[:error] = 'Sorry, only the donation\'s owner can edit their donation.'
+    redirect_to '/donations'
   end
 
   def update
+    @donation = Donation.find(params[:id])
+
     if @donation.update(donation_params)
       flash[:success] = 'Your donation was updated.'
       redirect_to @donation
@@ -53,9 +60,11 @@ class DonationsController < ApplicationController
   end
 
   def destroy
+    @donation = Donation.find(params[:id])
+
     @donation.destroy
     flash[:success] = 'Your donation was removed!'
-    redirect_to root_path
+    redirect_to '/pages/user_donations'
   end
 
   private

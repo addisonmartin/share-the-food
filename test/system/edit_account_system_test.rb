@@ -31,9 +31,9 @@ class EditAccountTest < ApplicationSystemTestCase
     fill_in 'Name', with: 'New Name'
     fill_in 'Current password', with: 'password'
 
-    click_button "Update"
-    assert_text "Your account has been updated successfully."
-    assert_text "New Name"
+    click_button 'Update'
+    assert_text 'Your account has been updated successfully.'
+    assert_text 'New Name'
   end
 
   test 'editing users email' do
@@ -45,8 +45,8 @@ class EditAccountTest < ApplicationSystemTestCase
     fill_in 'Email', with: 'newemail@email.com'
     fill_in 'Current password', with: 'password'
 
-    click_button "Update"
-    assert_text "Your account has been updated successfully."
+    click_button 'Update'
+    assert_text 'Your account has been updated successfully.'
   end
 
   test 'editing users password' do
@@ -58,7 +58,7 @@ class EditAccountTest < ApplicationSystemTestCase
     fill_in 'Password', with: 'newpassword'
     fill_in 'Current password', with: 'password'
 
-    click_button "Update"
+    click_button 'Update'
     assert_text 'Password confirmation doesn\'t match Password'
 
     fill_in 'Password', with: 'newpassword'

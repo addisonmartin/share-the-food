@@ -4,5 +4,10 @@
     <% description 'View all past donations.' %>
     <% keywords 'Share the Food, Account History, User History, Donation History, History, Account, Donations' %>
 
+    <h2>All past and current donations.</h2>
+    <div class="row" id="user-donations-list">
+      <%= render @donation_history %>
+      <%= render no_donation_history_partial_path %>
+    </div>
   </div>
 </div>

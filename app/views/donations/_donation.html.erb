@@ -14,7 +14,7 @@
   <% if donation.user %>
   <div class="col-lg-2 col-lg-offset-10">
     <div class="btn-group" style="width:100%">
-      <%= link_to 'Delete', donation_path(donation), data: {:confirm => 'Are you sure you want to delete this donation?'}, :method => :delete, class: "btn btn-primary btn-block", id: "delete_#{donation.id}" %>
+      <%= link_to 'Remove', donation_path(donation), data: {:confirm => 'Are you sure you want to remove this donation? You will still be able to view it in your history.'}, :method => :delete, class: "btn btn-primary btn-block", id: "remove_#{donation.id}" %>
     </div>
   </div>
   </div>

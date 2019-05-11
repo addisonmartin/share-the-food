@@ -2,7 +2,7 @@
 
 require 'application_system_test_case'
 
-class ViewDonationsPageTest < ApplicationSystemTestCase
+class ViewDonationsTest < ApplicationSystemTestCase
   test 'viewing donations from home page' do
     visit root_path
     click_link 'Find Donations'

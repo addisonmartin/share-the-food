@@ -2,5 +2,5 @@
 
 require 'application_system_test_case'
 
-class LoginPageTest < ApplicationSystemTestCase
+class EditAccountTest < ApplicationSystemTestCase
 end

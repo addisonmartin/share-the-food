@@ -4,7 +4,8 @@
 # Used to control the (view) why signup page.
 class PagesController < ApplicationController
   def show
-    @donations = current_user.donations
+    # User donations is used by the page user_donations.html.erb
+    @user_donations = current_user ? current_user.donations : []
     render "pages/#{params[:page]}"
   end
 end

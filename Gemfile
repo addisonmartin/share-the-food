@@ -83,12 +83,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console
   gem 'byebug', '~> 11.0.0', platforms: %i[mri mingw x64_mingw]
-
-  # A static code analyzer for Rails
-  gem 'rails_best_practices', '~> 1.19.0'
-
-  # Another static code analyzer for Ruby.
-  gem 'rubycritic', '~> 4.0.2', require: false
 end
 
 group :development do
@@ -114,6 +108,15 @@ group :development do
   # Used by rack mini profiler for call stack profiling
   gem 'flamegraph', '~> 0.9.0'
   gem 'stackprof', '~> 0.2.0'
+
+  # A static code analyzer for Rails
+  gem 'rails_best_practices', '~> 1.19.0'
+
+  # Another static code analyzer for Rails
+  gem 'brakeman', '~> 4.5.0'
+
+  # Another static code analyzer for Ruby.
+  gem 'rubycritic', '~> 4.0.2', require: false
 end
 
 group :test do

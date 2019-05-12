@@ -60,5 +60,7 @@ class Donation < ApplicationRecord
 
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
-  pg_search_scope :search, against: [:name, :description, :pickup_notes]
+  pg_search_scope :search,
+                  against: %i[name description pickup_notes],
+                  using: { tsearch: { prefix: true } }
 end

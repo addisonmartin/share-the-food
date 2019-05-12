@@ -100,6 +100,14 @@ group :development do
 
   # Used to annotate source code with comments describing the datbase schema
   gem 'annotate', '~> 2.7.0'
+
+  # Used to display a performance badge on each page, during development only.
+  gem 'rack-mini-profiler', '~> 1.0.0'
+  # Used by rack mini profiler for memory profiling
+  gem 'memory_profiler', '~> 0.9.0'
+  # Used by rack mini profiler for call stack profiling
+  gem 'flamegraph', '~> 0.9.0'
+  gem 'stackprof', '~> 0.2.0'
 end
 
 group :test do

@@ -4,10 +4,19 @@
     <div class="col-lg-10">
       <a href="<%= edit_donation_path(donation.id) %>" class="list-group-item list-group-item-action list-group-item-primary" id=<%= edit_donation_path(donation.id) %>>
         <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1"><%= donation.name %></h5>
+          <% unless donation.images.empty? %>
+          <%= image_tag donation.images[0].variant(resize: "150x1500"), class: "rounded float-left" %>
+          <% end %>
+          <div class="col" align="center">
+            <h5 class="mb-1"><%= donation.name %></h5>
+            <p class="mb-1"><%= donation.description%></p>
+            <% if donation.user %>
+            <small><%= donation.user.display_name %></small>
+            <% else %>
+            <small>No User Name Available</small>
+            <% end %>
+          </div>
           <small><%= donation.fresh_until %></small>
-        </div>
-        <p class="mb-1"><%= donation.description%></p>
       </a>
     </div>
     <% if donation.user %>

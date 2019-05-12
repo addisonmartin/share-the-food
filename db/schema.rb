@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 2019_05_11_090826) do
     t.datetime "updated_at", null: false
     t.datetime "discarded_at"
     t.index ["discarded_at"], name: "index_donations_on_discarded_at"
+    t.index ["name"], name: "index_donations_on_name"
+    t.index ["pickup_notes"], name: "index_donations_on_pickup_notes"
     t.index ["user_id"], name: "index_donations_on_user_id"
   end
 

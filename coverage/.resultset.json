@@ -227,7 +227,7 @@
         null,
         null
       ],
-      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/registrations_controller.rb": [
+      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
         null,
         null,
         1,
@@ -235,23 +235,7 @@
         1,
         1,
         null,
-        null,
         1,
-        null,
-        1,
-        null,
-        1,
-        4,
-        null,
-        null,
-        null,
-        null,
-        1,
-        18,
-        null,
-        null,
-        null,
-        null,
         null,
         null
       ],
@@ -363,7 +347,7 @@
         null,
         null
       ],
-      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
+      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/registrations_controller.rb": [
         null,
         null,
         1,
@@ -371,7 +355,23 @@
         1,
         1,
         null,
+        null,
         1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        null,
+        null,
+        1,
+        18,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -727,6 +727,6 @@
         0
       ]
     },
-    "timestamp": 1557610960
+    "timestamp": 1557689807
   }
 }

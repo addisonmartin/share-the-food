@@ -79,13 +79,16 @@ gem 'meta-tags', '~> 2.11.0'
 # Used to soft delete donations, so users can view their history.
 gem 'discard', '~> 1.1.0'
 
-# A static code analyzer for Rails
-gem 'rails_best_practices', '~> 1.19.0'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console
   gem 'byebug', '~> 11.0.0', platforms: %i[mri mingw x64_mingw]
+
+  # A static code analyzer for Rails
+  gem 'rails_best_practices', '~> 1.19.0'
+
+  # Another static code analyzer for Ruby.
+  gem 'rubycritic', '~> 4.0.2', require: false
 end
 
 group :development do

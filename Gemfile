@@ -47,6 +47,8 @@ gem 'devise', '~> 4.6.0'
 
 # Used to show donations across multiple pages
 gem 'will_paginate', '~> 3.1.0'
+# USed to apply bootstrap themes to will_paginate tags.
+gem 'will_paginate-bootstrap4', '~> 0.2.0'
 
 # Used for continuous integration
 gem 'travis', '~> 1.8.0'

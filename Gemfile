@@ -70,8 +70,11 @@ gem 'cloudinary', '~> 1.11.0', require: false
 # Used by Active Storage for image analysis and manipulation
 gem 'mini_magick', '~> 4.9.0'
 
-# A static code analyzer for Ruby.
+# A static code analyzer for Ruby
 gem 'rubocop', '~> 0.68.0'
+
+# A performance analyzer for user with Rubocop
+gem 'rubocop-performance', '~> 1.2.0'
 
 # Used for search engine optimization.
 gem 'meta-tags', '~> 2.11.0'

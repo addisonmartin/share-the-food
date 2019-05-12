@@ -13,4 +13,4 @@ script:
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - sonar-scanner
-- bundle exec rubocop && bundle exec rails test && bundle exec rails test:system
+- bundle exec rubocop --require rubocop-performance && bundle exec rails test && bundle exec rails test:system

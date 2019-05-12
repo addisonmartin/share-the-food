@@ -22,14 +22,14 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <%= check_box_tag :is_perishable, "t", @donation.is_perishable, options={disabled: true} %> <strong> Is perishable? </strong>
           <%= check_box_tag :requires_preparation, "t", @donation.requires_preparation, options={disabled: true} %> <strong> Requires preparation? </strong>
           <%= check_box_tag :is_vegetarian, "t", @donation.is_vegetarian, options={disabled: true} %> <strong> Is vegetarian? </strong>
           <%= check_box_tag :is_vegan, "t", @donation.is_vegan, options={disabled: true} %> <strong> Is vegan? </strong>
           <%= check_box_tag :is_gluten_free, "t", @donation.is_gluten_free, options={disabled: true} %> <strong> Is gluten free? </strong>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <%= check_box_tag :contains_peanut, "t", @donation.contains_peanut, options={disabled: true} %> <strong> Contains peanuts? </strong>
           <%= check_box_tag :contains_treenut, "t", @donation.contains_treenut, options={disabled: true} %> <strong> Contains treenuts? </strong>
           <%= check_box_tag :contains_dairy, "t", @donation.contains_dairy, options={disabled: true} %> <strong> Contains dairy? </strong>

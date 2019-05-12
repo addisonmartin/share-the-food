@@ -25,12 +25,6 @@ gem 'jbuilder', '~> 2.8.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.4.0', require: false
 
@@ -68,6 +62,7 @@ gem 'activestorage-cloudinary-service', '~> 0.2.0'
 gem 'cloudinary', '~> 1.11.0', require: false
 
 # Used by Active Storage for image analysis and manipulation
+gem 'image_processing', '~> 1.9.0'
 gem 'mini_magick', '~> 4.9.0'
 
 # A static code analyzer for Ruby

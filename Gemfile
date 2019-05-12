@@ -95,6 +95,10 @@ group :development do
   gem 'spring', '~> 2.0.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  # Used for better, and interactive, error messages
+  gem 'better_errors', '~> 2.5.0'
+  gem 'binding_of_caller', '~> 0.8.0'
+
   # Used to automatically generate entity-relationship diagram
   gem 'rails-erd', '~> 1.5.0'
 

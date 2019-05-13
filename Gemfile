@@ -133,6 +133,12 @@ group :development do
 
   # Used to suggest performance improvements for Ruby.
   gem 'fasterer', '~> 0.5.0'
+
+  # Used to detect unused or unreachable routes.
+  gem 'traceroute', '~> 0.8.0'
+
+  # Used for benchmarking.
+  gem 'derailed_benchmarks', '~> 1.3.0'
 end
 
 group :test do

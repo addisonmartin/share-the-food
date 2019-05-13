@@ -24,6 +24,8 @@ class HomePageTest < ApplicationSystemTestCase
     assert_selector 'footer',
                     text: 'Share the Food | Questions? Contact us at: '\
                     'contact@sharethefood.net'
+
+    assert_selector 'a', text: 'Icons Provided by Icons8'
   end
 
   test 'home page, and not signed in, should have navigation bar ;

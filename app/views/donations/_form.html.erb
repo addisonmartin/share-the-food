@@ -9,6 +9,7 @@
   <%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 
   <h4> Allergen and Other Info: </h4>
+  <div class="col" align="left">
   <%= f.form_group :is_perishable, required: true do %>
     <%= f.check_box :is_perishable do %>
       <img src="https://img.icons8.com/ios/50/000000/future.png">
@@ -81,7 +82,7 @@
       Contains, or may contain, shellfish?
     <% end %>
   <% end %>
-
+</div>
   <%= f.file_field :images, multiple: true %>
 
   <%= f.submit class: "form-control btn btn-secondary"%>

@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.0'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -50,9 +50,6 @@ gem 'travis', '~> 1.8.0'
 # Helper gem used to verify a .travis.yml file is valid
 gem 'travis-lint', '~> 2.0.0'
 
-# Used to audit the Gemfile for security vulnerabilities
-gem 'bundler-audit', '~> 0.6.0'
-
 # Used to store environment variables in
 # a file not tracked by git, for security.
 gem 'dotenv', '~> 2.7.0'
@@ -96,6 +93,9 @@ group :development do
   gem 'spring', '~> 2.0.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  # Used to audit the Gemfile for security vulnerabilities
+  gem 'bundler-audit', '~> 0.6.0'
+
   # Used for better, and interactive, error messages
   gem 'better_errors', '~> 2.5.0'
   gem 'binding_of_caller', '~> 0.8.0'
@@ -121,13 +121,13 @@ group :development do
   gem 'brakeman', '~> 4.5.0'
 
   # Another static code analyzer for Ruby.
-  gem 'rubycritic', '~> 4.0.2', require: false
+  gem 'rubycritic', '~> 4.0.0', require: false
 end
 
 group :test do
-  gem 'webdrivers', '~> 3.8.0'
+  gem 'webdrivers', '~> 3.9.0'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 3.17.0'
+  gem 'capybara', '~> 3.19.0'
   # Used to provide test coverage.
   gem 'simplecov', '~> 0.16.0', require: false
 end

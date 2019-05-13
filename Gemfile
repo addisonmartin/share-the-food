@@ -123,6 +123,10 @@ group :development do
 
   # Another static code analyzer for Ruby.
   gem 'rubycritic', '~> 4.0.0', require: false
+
+  # Used to profiler the database models,
+  # and see if any columns should be indexed.
+  gem 'lol_dba', '~> 2.1.0'
 end
 
 group :test do

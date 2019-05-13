@@ -130,6 +130,9 @@ group :development do
 
   # Used to detect database queries that could be optimized.
   gem 'bullet', '~> 6.0.0'
+
+  # Used to suggest performance improvements for Ruby.
+  gem 'fasterer', '~> 0.5.0'
 end
 
 group :test do

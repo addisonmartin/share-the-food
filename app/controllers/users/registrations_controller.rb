@@ -3,8 +3,6 @@
 module Users
   # Used to control Users signing in and up.
   class RegistrationsController < Devise::RegistrationsController
-    include Accessible
-
     # Ensures the current user is allowed to edit and cancel their own account.
     skip_before_action :check_user, except: %i[new create], raise: false
 

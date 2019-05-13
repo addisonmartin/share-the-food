@@ -36,19 +36,6 @@ ActiveRecord::Schema.define(version: 2019_05_11_090826) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "business_users", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_business_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_business_users_on_reset_password_token", unique: true
-  end
-
   create_table "donations", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"

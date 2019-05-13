@@ -1,14 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :business_users, path: 'business_users', controllers: {
-    sessions: 'business_users/sessions',
-    registrations: 'business_users/registrations'
-  }
-  devise_scope :business_users do
-    get '/business_users/sign_out' => 'devise/sessions#destroy'
-  end
-
   devise_for :users, path: 'users', controllers: {
     sessions: 'users/sessions', registrations: 'users/registrations'
   }

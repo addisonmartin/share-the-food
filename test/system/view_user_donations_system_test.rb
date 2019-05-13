@@ -19,7 +19,7 @@ class ViewUserDonationsTest < ApplicationSystemTestCase
 
     assert_text donations(:default_user_donation).name
     assert_text donations(:default_user_donation).description
-    assert_text donations(:default_user_donation).fresh_until.to_s
+    assert_text 'Mon, 02 Jun 2008 19:02:39 +0000'
     assert_text donations(:default_user_donation).user.name
   end
 end

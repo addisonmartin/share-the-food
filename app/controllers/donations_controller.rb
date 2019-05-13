@@ -13,13 +13,9 @@ class DonationsController < ApplicationController
   def index
     search = params[:search]
 
-    @donations = if search.blank?
-                   Donation.kept.paginate(page: params[:page], per_page: 9)
-                 else
-                   Donation.kept.search(search).paginate(
-                     page: params[:page], per_page: 9
-                   )
-                 end
+    @donations = Donation.kept
+    @donations = @donations.search(search) unless search.blank?
+    @donations = @donations.paginate(page: params[:page], per_page: 9)
   end
 
   def new

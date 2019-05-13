@@ -6,7 +6,7 @@
   <div class="row" id="donations-list">
     <%= render @donations %>
     <div class="infinite-scroll">
-      <%= will_paginate @donations, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      <%= will_paginate @donations, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: ['pagination pagination-lg'] %>
     </div>
     <%= render no_donations_partial_path %>
   </div>

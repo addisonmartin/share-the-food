@@ -20,63 +20,85 @@
 
     <h2>Allergen Information:</h2>
 
-    <%= check_box_tag :is_perishable, "t", @donation.is_perishable, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/future.png">
-    <strong> Is perishable? </strong>
+    <div class="input-group">
+      <%= check_box_tag :is_perishable, "t", @donation.is_perishable, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/future.png">
+      <strong> Is perishable? </strong>
+    </div>
 
-    <%= check_box_tag :requires_preparation, "t", @donation.requires_preparation, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/tableware.png">
-    <strong> Requires preparation? </strong>
+    <div class="input-group">
+      <%= check_box_tag :requires_preparation, "t", @donation.requires_preparation, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/tableware.png">
+      <strong> Requires preparation? </strong>
+    </div>
 
-    <%= check_box_tag :is_vegetarian, "t", @donation.is_vegetarian, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/natural-food.png">
-    <strong> Is vegetarian? </strong>
+    <div class="input-group">
+      <%= check_box_tag :is_vegetarian, "t", @donation.is_vegetarian, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/natural-food.png">
+      <strong> Is vegetarian? </strong>
+    </div>
 
-    <%= check_box_tag :is_vegan, "t", @donation.is_vegan, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/vegan-symbol.png">
-    <strong> Is vegan? </strong>
+    <div class="input-group">
+      <%= check_box_tag :is_vegan, "t", @donation.is_vegan, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/vegan-symbol.png">
+      <strong> Is vegan? </strong>
+    </div>
 
-    <%= check_box_tag :is_gluten_free, "t", @donation.is_gluten_free, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/no-gluten.png">
-    <strong> Is gluten free? </strong>
+    <div class="input-group">
+      <%= check_box_tag :is_gluten_free, "t", @donation.is_gluten_free, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/no-gluten.png">
+      <strong> Is gluten free? </strong>
+    </div>
 
-    <%= check_box_tag :contains_peanut, "t", @donation.contains_peanut, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/peanuts.png">
-    <strong> Contains peanuts? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_peanut, "t", @donation.contains_peanut, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/peanuts.png">
+      <strong> Contains peanuts? </strong>
+    </div>
 
-    <%= check_box_tag :contains_treenut, "t", @donation.contains_treenut, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/nut.png">
-    <strong> Contains treenuts? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_treenut, "t", @donation.contains_treenut, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/nut.png">
+      <strong> Contains treenuts? </strong>
+    </div>
 
-    <%= check_box_tag :contains_dairy, "t", @donation.contains_dairy, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/tetra-pak.png">
-    <strong> Contains dairy? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_dairy, "t", @donation.contains_dairy, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/tetra-pak.png">
+      <strong> Contains dairy? </strong>
+    </div>
 
-    <%= check_box_tag :contains_soy, "t", @donation.contains_soy, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/soy.png">
-    <strong> Contains soy? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_soy, "t", @donation.contains_soy, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/soy.png">
+      <strong> Contains soy? </strong>
+    </div>
 
-    <%= check_box_tag :contains_egg, "t", @donation.contains_egg, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/eggs.png">
-    <strong> Contains eggs? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_egg, "t", @donation.contains_egg, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/eggs.png">
+      <strong> Contains eggs? </strong>
+    </div>
 
-    <%= check_box_tag :contains_fish, "t", @donation.contains_fish, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/whole-fish.png">
-    <strong> Contains fish? </strong>
+    <div class="input-group">
+      <%= check_box_tag :contains_fish, "t", @donation.contains_fish, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/whole-fish.png">
+      <strong> Contains fish? </strong>
 
-    <%= check_box_tag :contains_shellfish, "t", @donation.contains_shellfish, options={disabled: true} %>
-    <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
-    <strong> Contains shellfish? </strong>
+      <div class="input-group">
+        <%= check_box_tag :contains_shellfish, "t", @donation.contains_shellfish, options={disabled: true} %>
+        <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
+        <strong> Contains shellfish? </strong>
+      </div>
 
+      <% if @donation.images.empty? %>
+      <h2> No images for this donation.</h2>
+      <% else %>
+      <% @donation.images.each do |image| %>
+      <%= image_tag url_for(image) %>
+      <%= link_to image.filename, rails_blob_path(image, disposition: "attachment") %>
+      <% end %>
+      <% end %>
 
-    <% if @donation.images.empty? %>
-    <h2> No images for this donation.</h2>
-    <% else %>
-    <% @donation.images.each do |image| %>
-    <%= image_tag url_for(image) %>
-    <%= link_to image.filename, rails_blob_path(image, disposition: "attachment") %>
-    <% end %>
-    <% end %>
-
-    <a class="btn btn-secondary btn-lg" href="javascript:history.back()" role="button">Back</a>
-  </div>
+      <a class="btn btn-secondary btn-lg" href="javascript:history.back()" role="button">Back</a>
+    </div>

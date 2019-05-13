@@ -29,8 +29,9 @@ gem 'jbuilder', '~> 2.8.0'
 gem 'bootsnap', '~> 1.4.0', require: false
 
 gem 'bootstrap-sass', '~> 3.4.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.0'
+# Use SCSS for stylesheets.
+# Uses the C implementation of SASS for better performance.
+gem 'sassc-rails', '~> 2.1.0'
 # Required by bootstrap
 gem 'jquery-rails', '~> 4.3.0'
 # Required by the bootstrap_form_for in .erb

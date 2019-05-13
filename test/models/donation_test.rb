@@ -26,6 +26,7 @@
 #  contains_shellfish   :boolean
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  discarded_at         :datetime
 #
 
 require 'test_helper'

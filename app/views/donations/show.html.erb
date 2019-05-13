@@ -84,21 +84,22 @@
       <%= check_box_tag :contains_fish, "t", @donation.contains_fish, options={disabled: true} %>
       <img src="https://img.icons8.com/ios/50/000000/whole-fish.png">
       <strong> Contains fish? </strong>
-
-      <div class="input-group">
-        <%= check_box_tag :contains_shellfish, "t", @donation.contains_shellfish, options={disabled: true} %>
-        <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
-        <strong> Contains shellfish? </strong>
-      </div>
-
-      <% if @donation.images.empty? %>
-      <h2> No images for this donation.</h2>
-      <% else %>
-      <% @donation.images.each do |image| %>
-      <%= image_tag url_for(image) %>
-      <%= link_to image.filename, rails_blob_path(image, disposition: "attachment") %>
-      <% end %>
-      <% end %>
-
-      <a class="btn btn-primary btn-lg" href="javascript:history.back()" role="button">Back</a>
     </div>
+
+    <div class="input-group">
+      <%= check_box_tag :contains_shellfish, "t", @donation.contains_shellfish, options={disabled: true} %>
+      <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
+      <strong> Contains shellfish? </strong>
+    </div>
+
+    <% if @donation.images.empty? %>
+    <h2> No images for this donation.</h2>
+    <% else %>
+    <% @donation.images.each do |image| %>
+    <%= image_tag url_for(image) %>
+    <%= link_to image.filename, rails_blob_path(image, disposition: "attachment") %>
+    <% end %>
+    <% end %>
+
+    <a class="btn btn-primary btn-lg" href="javascript:history.back()" role="button">Back</a>
+  </div>

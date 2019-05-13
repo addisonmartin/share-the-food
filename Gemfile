@@ -127,6 +127,9 @@ group :development do
   # Used to profiler the database models,
   # and see if any columns should be indexed.
   gem 'lol_dba', '~> 2.1.0'
+
+  # Used to detect database queries that could be optimized.
+  gem 'bullet', '~> 6.0.0'
 end
 
 group :test do

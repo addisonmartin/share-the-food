@@ -7,13 +7,13 @@ class CreateDonations < ActiveRecord::Migration[5.2]
     create_table :donations do |t|
       t.belongs_to :user, index: true, required: true
 
-      t.string :name, required: true
+      t.string :name, index: true, required: true
       t.text :description, required: true
       t.datetime :fresh_until, required: true
 
       t.float :latitude, required: true
       t.float :longitude, required: true
-      t.text :pickup_notes, required: true
+      t.text :pickup_notes, index: true, required: true
 
       t.boolean :is_perishable, required: true
       t.boolean :requires_preparation, required: true

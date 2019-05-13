@@ -25,12 +25,6 @@ gem 'jbuilder', '~> 2.8.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.4.0', require: false
 
@@ -68,16 +62,23 @@ gem 'activestorage-cloudinary-service', '~> 0.2.0'
 gem 'cloudinary', '~> 1.11.0', require: false
 
 # Used by Active Storage for image analysis and manipulation
+gem 'image_processing', '~> 1.9.0'
 gem 'mini_magick', '~> 4.9.0'
 
-# A static code analyzer for Ruby.
+# A static code analyzer for Ruby
 gem 'rubocop', '~> 0.68.0'
+
+# A performance analyzer for user with Rubocop
+gem 'rubocop-performance', '~> 1.2.0'
 
 # Used for search engine optimization.
 gem 'meta-tags', '~> 2.11.0'
 
 # Used to soft delete donations, so users can view their history.
 gem 'discard', '~> 1.1.0'
+
+# Used to access PostgreSQL's native text search features. For the search bar.
+gem 'pg_search', '~> 2.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to
@@ -95,11 +96,32 @@ group :development do
   gem 'spring', '~> 2.0.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  # Used for better, and interactive, error messages
+  gem 'better_errors', '~> 2.5.0'
+  gem 'binding_of_caller', '~> 0.8.0'
+
   # Used to automatically generate entity-relationship diagram
   gem 'rails-erd', '~> 1.5.0'
 
   # Used to annotate source code with comments describing the datbase schema
   gem 'annotate', '~> 2.7.0'
+
+  # Used to display a performance badge on each page, during development only.
+  gem 'rack-mini-profiler', '~> 1.0.0'
+  # Used by rack mini profiler for memory profiling
+  gem 'memory_profiler', '~> 0.9.0'
+  # Used by rack mini profiler for call stack profiling
+  gem 'flamegraph', '~> 0.9.0'
+  gem 'stackprof', '~> 0.2.0'
+
+  # A static code analyzer for Rails
+  gem 'rails_best_practices', '~> 1.19.0'
+
+  # Another static code analyzer for Rails
+  gem 'brakeman', '~> 4.5.0'
+
+  # Another static code analyzer for Ruby.
+  gem 'rubycritic', '~> 4.0.2', require: false
 end
 
 group :test do

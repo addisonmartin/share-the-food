@@ -31,6 +31,7 @@
 # The main, central model of the applicaiton. A food donation!
 class Donation < ApplicationRecord
   include Discard::Model
+  include PgSearch
 
   belongs_to :user
 
@@ -59,9 +60,7 @@ class Donation < ApplicationRecord
 
   default_scope -> { includes(:user).order(fresh_until: :asc) }
 
-  scope :search, lambda { |search|
-    where('name ILIKE lower(?) OR description ILIKE lower(?)',
-          "%#{search}%",
-          "%#{search}%")
-  }
+  pg_search_scope :search,
+                  against: %i[name description pickup_notes],
+                  using: { tsearch: { prefix: true } }
 end

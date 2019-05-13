@@ -14,7 +14,6 @@ class HomePageTest < ApplicationSystemTestCase
     visit root_path
 
     assert_selector 'a', text: 'Share the Food'
-    assert_selector 'a', text: 'Home'
     assert_selector 'a', text: 'View Donations'
     assert_selector 'a', text: 'Add a Donation'
   end
@@ -25,6 +24,8 @@ class HomePageTest < ApplicationSystemTestCase
     assert_selector 'footer',
                     text: 'Share the Food | Questions? Contact us at: '\
                     'contact@sharethefood.net'
+
+    assert_selector 'a', text: 'Icons Provided by Icons8'
   end
 
   test 'home page, and not signed in, should have navigation bar ;

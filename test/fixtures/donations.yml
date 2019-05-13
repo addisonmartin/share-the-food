@@ -24,6 +24,7 @@
 #  contains_shellfish   :boolean
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  discarded_at         :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
@@ -36,7 +37,7 @@ default_user_donation:
   user: default_user
   name: Default User Donation
   description: This is a donation. It was donated, by a user. ???
-  fresh_until: 12-31-2100
+  fresh_until: Mon Jun 02 12:02:39 -0700 2008
   latitude: 100
   longitude: -100
   pickup_notes: These are default pickup notes. They are useful, trust me.
@@ -57,7 +58,7 @@ donation_for_delete_test:
   user: default_user
   name: Donation to be Deleted
   description: This is a donation. It won't exist forever.
-  fresh_until: 12-31-2100
+  fresh_until: Mon Jun 02 12:02:39 -0700 2008
   latitude: 100
   longitude: -100
   pickup_notes: Pickup notes with info in them, trust me.

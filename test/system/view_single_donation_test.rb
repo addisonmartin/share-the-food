@@ -41,8 +41,7 @@ class ViewSingleDonationTest < ApplicationSystemTestCase
     click_link 'Find Donations'
     click_link donations(:default_user_donation).name.to_s
 
-    assert_selector 'p',
-                    text: donations(:default_user_donation).fresh_until.to_s
+    assert_selector 'p', text: 'Mon, 02 Jun 2008 19:02:39 +0000'
   end
 
   test 'viewing a donation should display its location on a map' do

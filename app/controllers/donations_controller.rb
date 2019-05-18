@@ -8,6 +8,10 @@ class DonationsController < ApplicationController
 
   def show
     @donation = Donation.find(params[:id])
+
+    # Used to pass the donation's location to the Google Map's javascript.
+    gon.lat = @donation.latitude
+    gon.lng = @donation.longitude
   end
 
   def index
@@ -26,6 +30,9 @@ class DonationsController < ApplicationController
     # Paginate the donations based on the given page.
     @donations = @donations.paginate(page: params[:page], per_page: 9)
                            .includes(:user, :images_attachments)
+
+    # Used to pass the donations to the Google Map's javascript.
+    gon.donations_list = @donations.to_json.html_safe
   end
 
   def new

@@ -1,6 +1,6 @@
-function initMapForShow(lat, lng)
+function initMapForShow()
 {
-  var coords = new google.maps.LatLng(lat, lng);
+  var coords = new google.maps.LatLng(gon.lat, gon.lng);
 
   var mapOptions = {
     center: coords,

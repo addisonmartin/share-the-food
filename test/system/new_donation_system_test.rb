@@ -68,7 +68,7 @@ class NewDonationTest < ApplicationSystemTestCase
 
     message = page.find('#donation_latitude')\
                   .native.attribute('validationMessage')
-    assert_equal message, 'Please fill out this field.'
+    assert_equal message, '' # Always loads with a default value.
   end
 
   test 'adding a donation requires a longitude' do
@@ -84,7 +84,7 @@ class NewDonationTest < ApplicationSystemTestCase
 
     message = page.find('#donation_longitude')\
                   .native.attribute('validationMessage')
-    assert_equal message, 'Please fill out this field.'
+    assert_equal message, '' # Always loads with a default value.
   end
 
   test 'adding a donation requires pickup notes' do

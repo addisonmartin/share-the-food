@@ -1,9 +1,5 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function(){
-    initMapForShow(<%=@donation.latitude%>, <%=@donation.longitude%>)
-  });
+<script src="https://maps.googleapis.com/maps/api/js?key=<%#{ENV['GOOGLE_MAPS_API_KEY']}%>&callback=initMapForShow" async defer>
 </script>
-
 <div class="container-fluid" id="single-donation-content">
   <div class="col-lg-6 col-lg-offset-3" align="center"">
     <h1><%= title 'Donation Details' %></h1>

@@ -78,6 +78,9 @@ gem 'discard', '~> 1.1.0'
 # Used to access PostgreSQL's native text search features. For the search bar.
 gem 'pg_search', '~> 2.1.0'
 
+# Used to pass Ruby variables to Javascript.
+gem 'gon', '~> 6.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console

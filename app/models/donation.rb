@@ -59,7 +59,7 @@ class Donation < ApplicationRecord
 
   has_many_attached :images
 
-  default_scope -> { includes(:user).order(fresh_until: :asc) }
+  default_scope -> { order(fresh_until: :asc) }
 
   pg_search_scope :search,
                   against: %i[name description pickup_notes],

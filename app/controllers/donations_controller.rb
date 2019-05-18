@@ -13,9 +13,19 @@ class DonationsController < ApplicationController
   def index
     search = params[:search]
 
+    # Only get the donations that haven't been deleted.
     @donations = Donation.kept
-    @donations = @donations.search(search) unless search.blank?
+                         .includes(:user, :images_attachments)
+
+    # Get the donations that match the search, if a search is given.
+    unless search.blank?
+      @donations = @donations.search(search)
+                             .includes(:user, :images_attachments)
+    end
+
+    # Paginate the donations based on the given page.
     @donations = @donations.paginate(page: params[:page], per_page: 9)
+                           .includes(:user, :images_attachments)
   end
 
   def new

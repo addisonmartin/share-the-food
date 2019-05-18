@@ -8,6 +8,7 @@ class DonationsController < ApplicationController
 
   def show
     @donation = Donation.find(params[:id])
+    authorize! :show, @donation
 
     # Used to pass the donation's location to the Google Map's javascript.
     gon.lat = @donation.latitude
@@ -15,6 +16,7 @@ class DonationsController < ApplicationController
   end
 
   def index
+    authorize! :index, Donation
     search = params[:search]
 
     # Only get the donations that haven't been deleted.
@@ -32,15 +34,17 @@ class DonationsController < ApplicationController
                            .includes(:user, :images_attachments)
 
     # Used to pass the donations to the Google Map's javascript.
-    gon.donations_list = @donations.to_json.html_safe
+    gon.donations_list = @donations
   end
 
   def new
     @donation = Donation.new
+    authorize! :new, @donation
   end
 
   def create
     @donation = Donation.new(donation_params)
+    authorize! :create, @donation
 
     if @donation.save
       flash[:success] = 'Donation was uploaded! Thank you'
@@ -53,15 +57,12 @@ class DonationsController < ApplicationController
 
   def edit
     @donation = Donation.kept.find(params[:id])
-
-    return if current_user && (current_user.id == @donation.user.id)
-
-    flash[:error] = 'Sorry, only the donation\'s owner can edit their donation.'
-    redirect_to '/donations'
+    authorize! :edit, @donation
   end
 
   def update
     @donation = Donation.kept.find(params[:id])
+    authorize! :update, @donation
 
     if @donation.update(donation_params)
       flash[:success] = 'Your donation was updated.'
@@ -74,6 +75,7 @@ class DonationsController < ApplicationController
 
   def destroy
     @donation = Donation.kept.find(params[:id])
+    authorize! :destroy, @donation
 
     @donation.discard
     flash[:success] = 'Your donation was removed!'

@@ -29,4 +29,6 @@ class User < ApplicationRecord
   validates_presence_of :display_name
   validates_presence_of :email
   validates_presence_of :encrypted_password
+
+  validates_inclusion_of :admin, in: [true, false]
 end

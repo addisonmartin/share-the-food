@@ -81,6 +81,12 @@ gem 'pg_search', '~> 2.1.0'
 # Used to pass Ruby variables to Javascript.
 gem 'gon', '~> 6.2.0'
 
+# Used for user authorization, ie different user roles. (Business and admin.)
+gem 'cancancan', '~> 3.0.0'
+
+# Used to create an admin dashboard, for admin users only (ie devs).
+gem 'rails_admin', '~> 1.4.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to
   # stop execution and get a debugger console

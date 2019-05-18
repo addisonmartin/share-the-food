@@ -15,7 +15,6 @@ class DonationsController < ApplicationController
     gon.lng = @donation.longitude
   end
 
-  # rubocop:disable Metrics/AbcSize
   def index
     authorize! :index, Donation
     search = params[:search]
@@ -35,9 +34,8 @@ class DonationsController < ApplicationController
                            .includes(:user, :images_attachments)
 
     # Used to pass the donations to the Google Map's javascript.
-    gon.donations_list = @donations.to_json.html_safe
+    gon.donations_list = @donations
   end
-  # rubocop:enable Metrics/AbcSize
 
   def new
     @donation = Donation.new

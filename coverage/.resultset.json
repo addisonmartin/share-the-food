@@ -311,9 +311,13 @@
         null,
         17,
         17,
+        null,
         17,
         null,
         null,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -330,6 +334,19 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
         null,
         null
       ],
@@ -356,17 +373,6 @@
         null,
         null,
         null,
-        null,
-        null
-      ],
-      "/home/addisonmartin/Documents/SeniorProject/share-the-food/app/controllers/users/sessions_controller.rb": [
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -542,6 +548,6 @@
         0
       ]
     },
-    "timestamp": 1558157688
+    "timestamp": 1558159195
   }
 }

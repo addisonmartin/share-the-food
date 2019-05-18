@@ -12,7 +12,13 @@ class Ability
     # Additional permissions for logged in users
     can :create, Donation
     can :manage, Donation, user_id: user.id
-    can :manage, Donation if user.admin? # additional permissions for admins
+
+    return unless user.admin?
+
+    # Additional permissions for admins
+    can :manage, :all
+    can :access, :rails_admin   # grant access to rails_admin
+    can :read, :dashboard       # grant access to the rails_admin dashboard
 
     # The first argument to `can` is the action you are giving the user
     # permission to do.

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Only collect analytics when in production. -->
+  <% if Rails.env.production? %>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139559800-1"></script>
   <script>
@@ -10,6 +12,7 @@
 
     gtag('config', 'UA-139559800-1');
   </script>
+  <% end %>
 
   <!-- Required meta tags -->
   <meta charset="utf-8">

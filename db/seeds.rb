@@ -13,7 +13,8 @@ def seed_users
       name: name1 + (names2[rand(names2.length)]).to_s,
       display_name: name1,
       email: "email#{user_id}@email.com", password: '123456',
-      password_confirmation: '123456'
+      password_confirmation: '123456',
+      admin: false
     )
     user_id += 1
   end

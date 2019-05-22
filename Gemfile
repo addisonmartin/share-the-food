@@ -51,8 +51,8 @@ gem 'travis', '~> 1.8.0'
 # Helper gem used to verify a .travis.yml file is valid
 gem 'travis-lint', '~> 2.0.0'
 
-# Used to store environment variables in
-# a file not tracked by git, for security.
+# Used to store environment variables in .env
+# Not tracked by git, for security.
 gem 'dotenv', '~> 2.7.0'
 
 # Used to support image upload stored on Cloudinary's servers.

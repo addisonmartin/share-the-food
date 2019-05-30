@@ -20,10 +20,6 @@ gem 'mini_racer', '~> 0.2.0', platforms: :ruby
 gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.8.0'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.4.0', require: false
@@ -50,10 +46,6 @@ gem 'travis', '~> 1.8.0'
 
 # Helper gem used to verify a .travis.yml file is valid
 gem 'travis-lint', '~> 2.0.0'
-
-# Used to store environment variables in .env
-# Not tracked by git, for security.
-gem 'dotenv', '~> 2.7.0'
 
 # Used to support image upload stored on Cloudinary's servers.
 gem 'activestorage-cloudinary-service', '~> 0.2.0'

@@ -1,4 +1,4 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=<%#{ENV['GOOGLE_MAPS_API_KEY']}%>&callback=initMapForList" async defer>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.GOOGLE_MAPS_API_KEY %>&callback=initMapForList" async defer>
 </script>
 <div class="container-fluid">
   <div class="row">

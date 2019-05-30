@@ -1,90 +1,125 @@
 <%= bootstrap_form_for(@donation) do |f| %>
-  <%= f.text_field :name, maxlength: 100, placeholder: 'Name of Donation', class:'form-control', required: true %>
-  <%= f.text_area :description, rows: 6, maxlength: 1000, placeholder: 'Describe your Donation', class:'form-control', required: true %>
-  <%= f.datetime_field :fresh_until, class: 'form-control', required: true, id: 'fresh-until' %>
+<%= f.text_field :name, maxlength: 100, placeholder: 'Name of Donation', class:'form-control', required: true %>
+<%= f.text_area :description, rows: 6, maxlength: 1000, placeholder: 'Describe your Donation', class:'form-control', required: true %>
+<%= f.datetime_field :fresh_until, class: 'form-control', required: true, id: 'fresh-until' %>
 
-  <%= f.text_field :latitude, placeholder: "Latitude", class:'form-control', required: true %>
-  <%= f.text_field :longitude, placeholder: "Longitude", class:'form-control', required: true %>
-  <p> <div id="map2"></div></p>
-  <%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
+<%= f.text_field :latitude, placeholder: "Latitude", class:'form-control', required: true %>
+<%= f.text_field :longitude, placeholder: "Longitude", class:'form-control', required: true %>
+<p> <div id="map2"></div></p>
+<%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 
-  <h4> Allergen and Other Info: </h4>
-  <div class="col" align="left">
-  <%= f.form_group :is_perishable, required: true do %>
+<h4> Allergen and Other Info: </h4>
+<div class="col" align="left">
+  <label class="btn btn-primary">
+    <%= f.form_group :is_perishable, required: true do %>
     <%= f.check_box :is_perishable do %>
-      <img src="https://img.icons8.com/ios/50/000000/future.png">
-      Is Perishable?
+    <img src="https://img.icons8.com/ios/50/000000/future.png">
+    Is Perishable?
     <% end %>
-  <% end %>
-  <%= f.form_group :requires_preparation, required: true do %>
-    <%= f.check_box :requires_preparation do %>
-      <img src="https://img.icons8.com/ios/50/000000/tableware.png">
-      Requires preparation?
     <% end %>
-  <% end %>
-  <%= f.form_group :is_vegetarian, required: true do %>
-    <%= f.check_box :is_vegetarian do %>
-      <img src="https://img.icons8.com/ios/50/000000/natural-food.png">
-      Is vegetarian?
-    <% end %>
-  <% end %>
-  <%= f.form_group :is_vegan, required: true do %>
-    <%= f.check_box :is_vegan do %>
-      <img src="https://img.icons8.com/ios/50/000000/vegan-symbol.png">
-      Is vegan?
-    <% end %>
-  <% end %>
-  <%= f.form_group :is_gluten_free, required: true do %>
-    <%= f.check_box :is_gluten_free do %>
-      <img src="https://img.icons8.com/ios/50/000000/no-gluten.png">
-      Is gluten free?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_peanut, required: true do %>
-    <%= f.check_box :contains_peanut do %>
-      <img src="https://img.icons8.com/ios/50/000000/peanuts.png">
-      Contains, or may contain, peanuts?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_treenut, required: true do %>
-    <%= f.check_box :contains_treenut do %>
-      <img src="https://img.icons8.com/ios/50/000000/nut.png">
-      Contains, or may contain, treenuts?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_dairy, required: true do %>
-    <%= f.check_box :contains_dairy do %>
-      <img src="https://img.icons8.com/ios/50/000000/tetra-pak.png">
-      Contains, or may contain, dairy?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_soy, required: true do %>
-    <%= f.check_box :contains_soy do %>
-      <img src="https://img.icons8.com/ios/50/000000/soy.png">
-      Contains, or may contain, soy?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_egg, required: true do %>
-    <%= f.check_box :contains_egg do %>
-      <img src="https://img.icons8.com/ios/50/000000/eggs.png">
-      Contains, or may contain, egg?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_fish, required: true do %>
-    <%= f.check_box :contains_fish do %>
-      <img src="https://img.icons8.com/ios/50/000000/whole-fish.png">
-      Contains, or may contain, fish?
-    <% end %>
-  <% end %>
-  <%= f.form_group :contains_shellfish, required: true do %>
-    <%= f.check_box :contains_shellfish do %>
-      <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
-      Contains, or may contain, shellfish?
-    <% end %>
-  <% end %>
-</div>
-  <%= f.file_field :images, multiple: true %>
+  </label>
 
-  <%= f.submit class: "form-control btn btn-primary"%>
+  <label class="btn btn-primary">
+    <%= f.form_group :requires_preparation, required: true do %>
+    <%= f.check_box :requires_preparation do %>
+    <img src="https://img.icons8.com/ios/50/000000/tableware.png">
+    Requires preparation?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :is_vegetarian, required: true do %>
+    <%= f.check_box :is_vegetarian do %>
+    <img src="https://img.icons8.com/ios/50/000000/natural-food.png">
+    Is vegetarian?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :is_vegan, required: true do %>
+    <%= f.check_box :is_vegan do %>
+    <img src="https://img.icons8.com/ios/50/000000/vegan-symbol.png">
+    Is vegan?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :is_gluten_free, required: true do %>
+    <%= f.check_box :is_gluten_free do %>
+    <img src="https://img.icons8.com/ios/50/000000/no-gluten.png">
+    Is gluten free?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_peanut, required: true do %>
+    <%= f.check_box :contains_peanut do %>
+    <img src="https://img.icons8.com/ios/50/000000/peanuts.png">
+    Contains, or may contain, peanuts?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_treenut, required: true do %>
+    <%= f.check_box :contains_treenut do %>
+    <img src="https://img.icons8.com/ios/50/000000/nut.png">
+    Contains, or may contain, treenuts?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_dairy, required: true do %>
+    <%= f.check_box :contains_dairy do %>
+    <img src="https://img.icons8.com/ios/50/000000/tetra-pak.png">
+    Contains, or may contain, dairy?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_soy, required: true do %>
+    <%= f.check_box :contains_soy do %>
+    <img src="https://img.icons8.com/ios/50/000000/soy.png">
+    Contains, or may contain, soy?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_egg, required: true do %>
+    <%= f.check_box :contains_egg do %>
+    <img src="https://img.icons8.com/ios/50/000000/eggs.png">
+    Contains, or may contain, egg?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_fish, required: true do %>
+    <%= f.check_box :contains_fish do %>
+    <img src="https://img.icons8.com/ios/50/000000/whole-fish.png">
+    Contains, or may contain, fish?
+    <% end %>
+    <% end %>
+  </label>
+
+  <label class="btn btn-primary">
+    <%= f.form_group :contains_shellfish, required: true do %>
+    <%= f.check_box :contains_shellfish do %>
+    <img src="https://img.icons8.com/ios/50/000000/shellfish.png">
+    Contains, or may contain, shellfish?
+    <% end %>
+    <% end %>
+  </label>
+</div>
+<%= f.file_field :images, multiple: true %>
+
+<%= f.submit class: "form-control btn btn-primary"%>
 
 <% end %>

@@ -6,11 +6,6 @@
 
 <h2>Donated by <%= @donation.user.display_name %> </h2>
 <h3> <%= @donation.name %> </h3>
-<p> Description: <%= @donation.description %> </p>
-<p> Fresh Until: <%= localize(@donation.fresh_until) %> </p>
-
-<p> <div id="map"> </div> </p>
-<p> Pickup Notes: <%= @donation.pickup_notes %> </p>
 
 <h2>Allergen Information:</h2>
 
@@ -109,6 +104,11 @@
     <strong> Contains shellfish? </strong>
   </div>
 </label>
+
+<p> Description: <%= @donation.description %> </p>
+<p> Fresh Until: <%= localize(@donation.fresh_until) %> </p>
+<p> Pickup Notes: <%= @donation.pickup_notes %> </p>
+<p> <div id="map"> </div> </p>
 
 <% if @donation.images.empty? %>
 <h2> No images for this donation.</h2>

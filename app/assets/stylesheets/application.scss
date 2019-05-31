@@ -12,9 +12,6 @@
 *
 */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 @import "custom_theme";
 
 @import "responsive";
@@ -25,41 +22,26 @@
   padding: 20px;
 }
 
-.jumbotron
-{
-  width: 100%;
-}
-
-.field-container
-{
-  padding: 10px;
-}
-
-input, select, textarea
-{
-  width: 100%;
-}
-
 #map
 {
-  width: 100%;
-  height: 60rem;
+  width: 90%;
+  height: 40rem;
 }
 
 #map1
 {
-  width: 100%;
-  height: 60rem;
+  width: 90%;
+  height: 40rem;
 }
 
 #map2
 {
-  width: 100%;
-  height: 60rem;
+  width: 90%;
+  height: 40rem;
 }
 
 #map3
 {
-  width: 100%;
-  height: 80rem;
+  width: 90%;
+  height: 40rem;
 }

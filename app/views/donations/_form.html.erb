@@ -2,11 +2,10 @@
 <%= f.text_field :name, maxlength: 100, placeholder: 'Name of Donation', class:'form-control', required: true %>
 <%= f.text_area :description, rows: 6, maxlength: 1000, placeholder: 'Describe your Donation', class:'form-control', required: true %>
 <%= f.datetime_field :fresh_until, class: 'form-control', required: true, id: 'fresh-until' %>
-
+<%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 <%= f.text_field :latitude, placeholder: "Latitude", class:'form-control', required: true %>
 <%= f.text_field :longitude, placeholder: "Longitude", class:'form-control', required: true %>
 <p> <div id="map2"></div></p>
-<%= f.text_area :pickup_notes, rows: 6, maxlength: 1000, placeholder: 'How can the donation be picked up, once someone is at this location?', class:'form-control', required: true %>
 
 <h4> Allergen and Other Info: </h4>
 <div class="col" align="left">

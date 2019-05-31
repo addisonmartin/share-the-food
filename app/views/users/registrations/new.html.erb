@@ -1,45 +1,41 @@
-<div class="container-fluid">
-  <div class="col-lg-6 col-lg-offset-3" align="center">
-    <h1><%= title 'Sign Up' %></h1>
-    <% description 'Enter your information and create a new account!' %>
-    <% keywords 'Share the Food, Signup, Create an Account, New Account, New User, Account, User' %>
+<h1><%= title 'Sign Up' %></h1>
+<% description 'Enter your information and create a new account!' %>
+<% keywords 'Share the Food, Signup, Create an Account, New Account, New User, Account, User' %>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field-container">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, placeholder: "Your full name." %>
-    </div>
-
-    <div class="field-container">
-      <%= f.label :display_name %><br />
-      <%= f.text_field :display_name, autofocus: true, placeholder: "The name that will be shown publicly with your donations." %>
-    </div>
-
-    <div class="field-container">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Never shown publicly." %>
-    </div>
-
-    <div class="field-container">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
-    </div>
-
-    <div class="field-container">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-primary" %>
-    </div>
-    <% end %>
-
-    <%= render "users/shared/links" %>
-  </div>
+<div class="field-container">
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true, placeholder: "Your full name." %>
 </div>
+
+<div class="field-container">
+  <%= f.label :display_name %><br />
+  <%= f.text_field :display_name, autofocus: true, placeholder: "The name that will be shown publicly with your donations." %>
+</div>
+
+<div class="field-container">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Never shown publicly." %>
+</div>
+
+<div class="field-container">
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "new-password" %>
+</div>
+
+<div class="field-container">
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+</div>
+
+<div class="actions">
+  <%= f.submit "Sign up", class: "btn btn-primary" %>
+</div>
+<% end %>
+
+<%= render "users/shared/links" %>

@@ -23,6 +23,23 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Rubocop is used for Ruby static code analysis.
+  gem 'rubocop'
+  # Rubocop Rails is the Rubocop extension ("cop") for Ruby on Rails.
+  gem 'rubocop-rails'
+  # Rubocop Performance is the Rubocop extension ("cop") for performance.
+  gem 'rubocop-performance'
+  # Rubocop Thread Safety is the Rubocop extension ("cop") for thread safety.
+  gem 'rubocop-thread_safety'
+  # Faker is used to generate realistic sample data for testing and development.
+  gem 'faker'
+  # RSpec is used as the testing framework. (As opposed to the default, Minitest).
+  gem 'rspec-rails'
+  # Factory Bot is used to handle model instances during tests. (As opposed to the default, fixtures).
+  gem 'factory_bot_rails'
+  # SimpleCov is used to calculate and report test coverage.
+  gem 'simplecov'
 end
 
 group :development do

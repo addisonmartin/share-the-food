@@ -64,6 +64,8 @@ group :development do
   gem 'stackprof'
   # Bullet is used to detect unoptimized N+1 database queries.
   gem 'bullet'
+  # Letter Opener is used to send emails directly to the browser, for easier debugging.
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

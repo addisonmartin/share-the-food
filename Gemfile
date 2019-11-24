@@ -54,6 +54,16 @@ group :development do
   gem 'better_errors'
   # Binding of Caller is required by Better Errors to show the call stack on error pages.
   gem 'binding_of_caller'
+  # Rack Mini Profiler is used to display an informative speed badge on the top of each page.
+  gem 'rack-mini-profiler'
+  # Memory profiler is used by Rack Mini Profiler.
+  gem 'memory_profiler'
+  # Flamegraph is used by Rack Mini Profiler.
+  gem 'flamegraph'
+  # Stack Prof is used by Rack Mini Profiler.
+  gem 'stackprof'
+  # Bullet is used to detect unoptimized N+1 database queries.
+  gem 'bullet'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

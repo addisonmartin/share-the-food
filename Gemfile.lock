@@ -267,7 +267,7 @@ GEM
       activerecord (>= 4.2)
       activesupport (>= 4.2)
     psych (3.1.0)
-    puma (3.12.1)
+    puma (3.12.3)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -515,7 +515,7 @@ DEPENDENCIES
   newrelic_rpm (~> 6.3.0)
   pg (>= 0.18, < 2.0)
   pg_search (~> 2.1.0)
-  puma (~> 3.12.0)
+  puma (~> 3.12.3)
   rack-mini-profiler (~> 1.0.0)
   rails (~> 5.2.3)
   rails-erd (~> 1.5.0)

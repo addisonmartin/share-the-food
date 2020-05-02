@@ -1,3 +1,5 @@
+ARCHIVED: See https://www.github.com/addisonmartin/sharethefood
+
 # Share the Food
 
 Master Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=master)](https://travis-ci.org/addisonmartin/share-the-food) Development Test Status: [![Build Status](https://travis-ci.org/addisonmartin/share-the-food.svg?branch=development)](https://travis-ci.org/addisonmartin/share-the-food/branches)

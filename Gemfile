@@ -34,7 +34,7 @@ gem 'jquery-rails', '~> 4.3.0'
 gem 'bootstrap_form', '~> 4.2.0'
 
 # Used for user authentication
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 
 # Used to show donations across multiple pages
 gem 'will_paginate', '~> 3.1.0'

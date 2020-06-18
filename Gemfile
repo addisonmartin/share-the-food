@@ -53,7 +53,7 @@ gem 'cloudinary', '~> 1.11.0', require: false
 
 # Used by Active Storage for image analysis and manipulation
 gem 'image_processing', '~> 1.9.0'
-gem 'mini_magick', '~> 4.9.0'
+gem 'mini_magick', '~> 4.9.4'
 
 # A static code analyzer for Ruby
 gem 'rubocop', '~> 0.68.0'
